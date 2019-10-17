@@ -1,1 +1,18 @@
 // Specific CSS for your home-page
+
+#midiquinze-gif-loader {
+  animation-duration: 6s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
