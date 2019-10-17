@@ -1,14 +1,8 @@
 const loader = () => {
-  const timer = () => {
-    setTimeout(showPage, 6000)
-  }
-  const showPage = () => {
-
-    document.getElementById("midiquinze-gif-loader").style.display = "none";
-    document.getElementById("home").style.display = "block";
-  }
-
-  timer();
+  document.querySelector(".loader").addEventListener('animationend', (event) => {
+    document.getElementById("midiquinze-gif-loader").classList.add("display-none");
+    document.getElementById("home").classList.remove("display-none");
+  })
 }
 
 export { loader };
