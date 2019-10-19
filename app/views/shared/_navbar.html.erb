@@ -2,15 +2,11 @@
   <%= image_tag 'midiquinze-logo-white.png' %>
 
   <div class="midiquinze-navbar-items d-flex align-items-end">
-    <%= link_to root_path, class: "mx-7px hover-border-bottom-white text-decoration-none" do %>
-      <h5 class="color-white font-weight-700 m-0">WORK</h5>
-    <% end %>
-    <%= link_to root_path, class: "mx-7px hover-border-bottom-white text-decoration-none" do %>
-      <h5 class="color-white font-weight-700 m-0">STUDIO</h5>
-    <% end %>
-    <%= link_to root_path, class: "mx-7px hover-border-bottom-white text-decoration-none" do %>
-      <h5 class="color-white font-weight-700 m-0">CONTACT</h5>
-    <% end %>
+    <h5 class="color-white font-weight-700 m-0">
+      <%= link_to "WORK", root_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
+      <%= link_to "STUDIO", root_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
+      <%= link_to "CONTACT", root_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
+    </h5>
 
     <div class="height-10px width-10px background-color-white border-radius-50pc mb-5px ml-7px mr-7px"></div>
   </div>
