@@ -1,0 +1,10 @@
+.color-button-white {
+  background-color: white;
+  border: 2px solid white;
+
+  &:hover {
+    border: 2px solid #fff;
+    background-color: black;
+    cursor: asset-url("small-arrow.png") 5 0, pointer !important;
+  }
+}
