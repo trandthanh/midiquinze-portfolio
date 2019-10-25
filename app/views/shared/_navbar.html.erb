@@ -1,8 +1,10 @@
-<div class="midiquinze-navbar position-fixed mt-neg6px width-100pc d-flex justify-content-between px-100px">
-  <%= image_tag 'midiquinze-logo-white.png', class: "height-112px" %>
+<div class="midiquinze-navbar position-fixed mt-neg6px width-100pc d-flex justify-content-between px-100px background-color-black pb-24px z-index-100">
+  <%= link_to root_path do %>
+    <%= image_tag 'midiquinze-logo-white.png', class: "height-112px" %>
+  <% end %>
 
   <div class="midiquinze-navbar-items d-flex align-items-end">
-    <h5 class="color-white font-weight-700 m-0">
+    <h5 class="color-white font-weight-400 m-0">
       <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
       <%= link_to "STUDIO", root_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
       <%= link_to "CONTACT", root_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>

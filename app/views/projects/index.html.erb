@@ -1,9 +1,9 @@
-<div class="color-white">
-  <% @projects.each do |project| %>
-    <%= project.client.name %>
-    <%= image_tag project.cover %>
-    <% project.photos.each do |photo| %>
-      <%= image_tag photo %>
+<div style="height: 100vh;">
+  <div class="row">
+    <% @projects.each do |project| %>
+      <div class="col-md-3 mb-30px">
+        <div class="height-192px" style="background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
+      </div>
     <% end %>
-  <% end %>
+  </div>
 </div>
