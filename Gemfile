@@ -20,6 +20,9 @@ gem 'rails_admin', '>= 1.0.0.rc'
 
 gem "aws-sdk-s3", require: false
 
+gem 'activestorage-validator'
+
+
 group :development do
   gem 'web-console', '>= 3.3.0'
 end
