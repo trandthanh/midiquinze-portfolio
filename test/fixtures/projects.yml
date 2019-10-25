@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyText
+  time: MyString
+  client: one
+  collaborator: one
+  job: one
+
+two:
+  title: MyString
+  description: MyText
+  time: MyString
+  client: two
+  collaborator: two
+  job: two
