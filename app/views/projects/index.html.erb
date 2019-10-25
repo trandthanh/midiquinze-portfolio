@@ -1,0 +1,9 @@
+<div class="color-white">
+  <% @projects.each do |project| %>
+    <%= project.client.name %>
+    <%= image_tag project.cover %>
+    <% project.photos.each do |photo| %>
+      <%= image_tag photo %>
+    <% end %>
+  <% end %>
+</div>
