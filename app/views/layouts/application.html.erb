@@ -9,6 +9,9 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
+  <% if current_page?(root_path) && session[:color].nil? %>
+    <% session[:color] = "black" %>
+  <% end %>
   <body class="<%= @colors %>">
     <% if current_page?(root_path) && session[:visited_before].nil? %>
       <div id="midiquinze-gif-loader" class="background-color-black height-100vh text-align-center">
