@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
+  <body class="<%= @colors %>">
     <% if current_page?(root_path) && session[:visited_before].nil? %>
       <div id="midiquinze-gif-loader" class="background-color-black height-100vh text-align-center">
         <%= image_tag "loader-midiquinze.gif", class: "loader height-400px margin-top-10pc" %>
@@ -18,7 +18,7 @@
     <%#= render 'shared/flashes' %>
     <div id="midiquinze-main" class="<%= (current_page?(root_path) && session[:visited_before].nil?) ? 'display-none' : '' %>">
       <%= render 'shared/navbar' %>
-      <div class="background-color-black pl-100px pr-100px pt-134px">
+      <div class="pl-100px pr-100px pt-134px">
         <%= yield %>
       </div>
       <%= render 'shared/footer' %>

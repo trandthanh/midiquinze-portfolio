@@ -5,6 +5,18 @@
   &:hover {
     border: 2px solid #fff;
     background-color: black;
-    cursor: asset-url("small-arrow.png") 7 0, pointer !important;
+    cursor: asset-url("small-white-arrow.png") 7 0, pointer !important;
   }
 }
+
+.color-button-black {
+  background-color: black;
+  border: 2px solid black;
+
+  &:hover {
+    border: 2px solid #fff;
+    background-color: white;
+    cursor: asset-url("small-black-arrow.png") 7 0, pointer !important;
+  }
+}
+
