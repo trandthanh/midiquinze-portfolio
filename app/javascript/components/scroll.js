@@ -1,18 +1,25 @@
-const firstScroll = () => {
-  const firstSlide = document.querySelector("#page-0");
-  const secondSlide = document.querySelector("#page-1");
+const scroll = () => {
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide) => {
+    slide.addEventListener('wheel', (event) => {
 
-  const yourElement = document.getElementById("page-1");
-  const y = yourElement.getBoundingClientRect().top - 140;
+      const bodyRect = document.body.getBoundingClientRect();
 
-  console.log(y);
+      let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
+      console.log(navbarHeight);
+      let nextSlideNumber = parseInt(slide.dataset.number, 10) + 1;
+      console.log(nextSlideNumber);
+      let nextSlide = document.querySelector(`#page-${nextSlideNumber}`);
+      console.log(nextSlide);
+      let y = nextSlide.offsetTop - navbarHeight;
+      console.log(y);
 
-  firstSlide.addEventListener('wheel', (event) => {
-    window.scrollTo({
-      top: y,
-      behavior: 'smooth'
-    });
-  });
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      })
+    })
+  })
 }
 
-export { firstScroll };
+export { scroll };
