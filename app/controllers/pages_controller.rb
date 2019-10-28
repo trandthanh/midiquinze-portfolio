@@ -17,8 +17,8 @@ class PagesController < ApplicationController
 
   def loading_session
     if session.key?(:visited_before)
-      session[:clear_time] = Time.parse(session[:time]) + 10 * 60
-      reset_session if session[:clear_time] == Time.parse(session[:time]) + 10 * 60
+      session[:clear_time] = Time.parse(session[:time]) + 5 * 60
+      reset_session if session[:clear_time] == Time.now
     else
       session[:visited_before] = true
       session[:time] = Time.now
