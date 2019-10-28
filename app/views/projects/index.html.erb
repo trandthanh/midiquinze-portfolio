@@ -1,8 +1,20 @@
 <div style="height: calc(100vh - 8vh - 134px);">
   <div class="row">
     <% @projects.each do |project| %>
-      <div class="col-md-3 mb-30px">
+      <div class="midiquinze-card col-md-3 mb-30px">
         <div class="height-192px" style="background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
+        <% if session[:color] == "black" %>
+          <div class="overlay-white">
+            <div class="text-black">
+              <h6 class="font-weight-700"><%= project.client.name.upcase %></h6>
+              <p class="mb-0"><%= project.time %></p>
+            </div>
+          </div>
+        <% else %>
+          <div class="overlay-black">
+            <div class="text-white">Hello World</div>
+          </div>
+        <% end %>
       </div>
     <% end %>
   </div>
