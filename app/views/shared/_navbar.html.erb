@@ -1,37 +1,71 @@
-<div class="midiquinze-navbar position-fixed mt-neg6px width-100pc d-flex justify-content-between px-100px pb-24px z-index-100">
-  <%= link_to root_path do %>
-    <%= image_tag 'midiquinze-logo-white.png', class: "height-112px" %>
-  <% end %>
+<% if session[:color] == "black" %>
+  <div class="midiquinze-navbar position-fixed mt-neg6px width-100pc d-flex justify-content-between px-100px pb-24px z-index-100">
 
-  <div class="midiquinze-navbar-items d-flex align-items-end">
-    <h5 class="midiquinze-navbar-links link-white font-weight-400 m-0">
-      <% if current_page?(projects_path) %>
-        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
-        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-      <% elsif current_page?(about_path) %>
-        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
-        <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-      <% elsif current_page?(contact_path) %>
-        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
-      <% else current_page?(root_path) %>
-        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
-        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
-        <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none" %>
-      <% end %>
-    </h5>
+    <%= link_to root_path do %>
+      <%= image_tag 'midiquinze-logo-white.png', class: "height-112px" %>
+    <% end %>
 
-    <% if session[:color] == "black" %>
+    <div class="midiquinze-navbar-items d-flex align-items-end">
+      <h5 class="midiquinze-navbar-links link-white font-weight-400 m-0">
+        <% if current_page?(projects_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(contact_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+        <% else current_page?(root_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none" %>
+        <% end %>
+      </h5>
+
       <%= link_to change_color_path, method: :post do %>
         <div class="color-button color-button-white height-13px width-13px border-radius-50pc mb-5px ml-7px mr-7px"></div>
       <% end %>
-    <% elsif session[:color] == "white" %>
+    </div>
+  </div>
+
+<% else %>
+
+  <div class="midiquinze-navbar position-fixed mt-neg2px width-100pc d-flex justify-content-between px-100px pb-24px z-index-100">
+
+    <%= link_to root_path do %>
+      <%= image_tag 'midiquinze-logo-black.png', class: "height-108px" %>
+    <% end %>
+
+    <div class="midiquinze-navbar-items d-flex align-items-end">
+      <h5 class="midiquinze-navbar-links link-black font-weight-400 m-0">
+        <% if current_page?(projects_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(contact_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
+        <% else current_page?(root_path) %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none"  %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none"  %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none" %>
+        <% end %>
+      </h5>
+
       <%= link_to change_color_path, method: :post do %>
         <div class="color-button color-button-black height-13px width-13px border-radius-50pc mb-5px ml-7px mr-7px"></div>
       <% end %>
-    <% end %>
+    </div>
   </div>
-</div>
+
+<% end %>
+

@@ -4,3 +4,11 @@
     color: white;
   }
 }
+
+
+.hover-border-bottom-black {
+  &:hover {
+    border-bottom: 1px solid black;
+    color: black;
+  }
+}
