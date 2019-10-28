@@ -1,2 +1,7 @@
-<div id="home" style="height: calc(100vh - 8vh - 134px); background-image: url(<%= image_path("midiquinze-home-banner.jpg") %>); background-position: bottom; background-size: cover;">
+<div id="home" class="mb-36vh" style="height: calc(100vh - 8vh - 134px); background-image: url(<%= image_path("midiquinze-home-banner.jpg") %>); background-position: bottom; background-size: cover;">
 </div>
+
+<% @projects.each do |project| %>
+  <div class="home-project" style="height: calc(100vh - 8vh - 134px); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
+  </div>
+<% end %>

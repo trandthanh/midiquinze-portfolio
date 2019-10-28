@@ -12,7 +12,7 @@
   <% if current_page?(root_path) && session[:color].nil? %>
     <% session[:color] = "black" %>
   <% end %>
-  <body class="<%= @colors %>">
+  <body id="scroll-page" class="<%= @colors %>">
     <% if current_page?(root_path) && session[:visited_before].nil? %>
       <div id="midiquinze-gif-loader" class="background-color-black height-100vh text-align-center">
         <%= image_tag "loader-midiquinze.gif", class: "loader height-400px margin-top-10pc" %>

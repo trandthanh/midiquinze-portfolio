@@ -4,6 +4,8 @@ class PagesController < ApplicationController
 
   def home
     loading_session
+
+    @projects = Project.all
   end
 
   def about

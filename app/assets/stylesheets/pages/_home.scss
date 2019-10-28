@@ -16,3 +16,10 @@
     opacity: 0;
   }
 }
+
+.home-project{
+  margin-bottom: 36vh;
+  &:last-child{
+    margin-bottom: 8vh;
+  }
+}
