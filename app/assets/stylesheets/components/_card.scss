@@ -31,3 +31,33 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.overlay-black {
+  position: absolute;
+  top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 100%;
+  width: calc(100% - 30px);
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: black;
+}
+
+.midiquinze-card:hover .overlay-black {
+  opacity: 1;
+}
+
+.text-white {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
