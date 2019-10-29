@@ -1,9 +1,9 @@
-<div id="page-0" class="slide mb-36vh" data-number="0" style="height: calc(100vh - 8vh - 134px); background-image: url(<%= image_path("midiquinze-home-banner.jpg") %>); background-position: bottom; background-size: cover;">
+<div id="page-0" class="slide mb-36vh" data-number="0" data-project="not-a-project" style="height: calc(100vh - 8vh - 134px); background-image: url(<%= image_path("midiquinze-home-banner.jpg") %>); background-position: bottom; background-size: cover;">
 </div>
 
 
 <% @projects.each do |project| %>
-  <div id="page-<%= project.id %>" class="d-flex slide" style="width: max-content;" data-number="<%= project.id %>" >
+  <div id="page-<%= project.id %>" class="d-flex slide" style="width: max-content;" data-number="<%= project.id %>" data-project="<%= project.client.name %>">
     <div  class="width-100vwminus200px" style="height: calc(100vh - 8vh - 134px); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
     </div>
 

@@ -19,10 +19,12 @@
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
-        <% else current_page?(root_path) %>
-          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
+        <% elsif current_page?(root_path) %>
+          <span id="project-name"></span><span id="slash" class="ml-16px"></span>
+          <%= link_to "WORK", projects_path, class: "ml-16px mr-7px hover-border-bottom-white text-decoration-none"  %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none"  %>
           <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none" %>
+        <% else %>
         <% end %>
       </h5>
 
