@@ -12,7 +12,7 @@ if (document.querySelector(".loader")) {
   loader();
 };
 
-scroll();
+// scroll();
 // test();
 
 

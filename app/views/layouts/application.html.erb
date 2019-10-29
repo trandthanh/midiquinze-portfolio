@@ -21,9 +21,7 @@
     <%#= render 'shared/flashes' %>
     <div id="midiquinze-main" class="<%= (current_page?(root_path) && session[:visited_before].nil?) ? 'display-none' : '' %>">
       <%= render 'shared/navbar' %>
-      <div class="pl-100px pr-100px pt-134px">
         <%= yield %>
-      </div>
       <%= render 'shared/footer' %>
     </div>
     <%= javascript_include_tag 'application' %>
