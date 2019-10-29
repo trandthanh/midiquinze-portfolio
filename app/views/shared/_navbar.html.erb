@@ -1,12 +1,12 @@
 <% if session[:color] == "black" %>
-  <div class="midiquinze-navbar position-fixed mt-neg6px width-100pc d-flex justify-content-between px-100px pb-24px z-index-100">
+  <div class="midiquinze-navbar d-flex height-16vh justify-content-between mt-neg1px position-fixed pb-1pc px-100px width-100pc z-index-100">
 
-    <%= link_to root_path do %>
-      <%= image_tag 'midiquinze-logo-white.png', class: "height-112px" %>
+    <%= link_to root_path, class: "width-50pc" do %>
+      <%= image_tag 'mq_logoblanc.png', class: "height-100pc" %>
     <% end %>
 
     <div class="midiquinze-navbar-items d-flex align-items-end">
-      <h6 class="midiquinze-navbar-links link-white font-weight-400 m-0">
+      <h6 class="midiquinze-navbar-links font-weight-400 link-white m-0">
         <% if current_page?(projects_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
@@ -29,17 +29,17 @@
       </h6>
 
       <%= link_to change_color_path, method: :post do %>
-        <div class="color-button color-button-white height-13px width-13px border-radius-50pc mb-5px ml-7px mr-7px"></div>
+        <div class="color-button color-button-white height-13px width-13px border-radius-50pc mb-3px ml-7px mr-7px"></div>
       <% end %>
     </div>
   </div>
 
 <% else %>
 
-  <div class="midiquinze-navbar position-fixed mt-neg2px width-100pc d-flex justify-content-between px-100px pb-24px z-index-100">
+  <div class="midiquinze-navbar d-flex height-16vh justify-content-between position-fixed pb-1pc px-100px width-100pc z-index-100">
 
-    <%= link_to root_path do %>
-      <%= image_tag 'midiquinze-logo-black.png', class: "height-108px" %>
+    <%= link_to root_path, class: "width-50pc" do %>
+      <%= image_tag 'mq_logonoir.png', class: "height-100pc" %>
     <% end %>
 
     <div class="midiquinze-navbar-items d-flex align-items-end">

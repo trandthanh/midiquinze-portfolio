@@ -34,10 +34,11 @@ class PagesController < ApplicationController
     if session[:color].nil?
       session[:color] = "black"
       @colors = "background-color-black color-white"
-    elsif session[:color] == "black"
-      @colors = "background-color-black color-white"
-    else
+    elsif session[:color] == "white"
+      session[:color] = "white"
       @colors = "background-color-white color-black"
+    else
+      @colors = "background-color-black color-white"
     end
   end
 

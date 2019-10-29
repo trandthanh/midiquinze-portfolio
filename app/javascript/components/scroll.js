@@ -33,7 +33,7 @@ const scroll = () => {
           top: y,
           behavior: 'smooth'
         })
-        // setTimeout(() => window.focus(), 10);
+        // setTimeout(() => window.focus(), 3000);
         if (nextSlideNumber !== 0) {
           setTimeout(() => changeName(nextSlide), 1000);
         } else {
