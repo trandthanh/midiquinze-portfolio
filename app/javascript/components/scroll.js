@@ -19,48 +19,50 @@ const scroll = () => {
 
   slides.forEach((slide) => {
     slide.addEventListener('wheel', (event) => {
+      // event.preventDefault();
 
-     if (event.deltaY > 0) {
-      event.preventDefault();
-      let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
-      let nextSlideNumber = parseInt(slide.dataset.number, 10) + 1;
-      let nextSlide = document.querySelector(`#page-${nextSlideNumber}`);
-      let y = nextSlide.offsetTop - navbarHeight;
-      // console.log(y);
+       if (event.deltaY > 0) {
+        let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
+        let nextSlideNumber = parseInt(slide.dataset.number, 10) + 1;
+        let nextSlide = document.querySelector(`#page-${nextSlideNumber}`);
+        let y = nextSlide.offsetTop - navbarHeight;
+        // console.log(y);
 
-      // scroll
-      window.scrollTo({
-        top: y,
-        behavior: 'smooth'
+        // scroll
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        })
+        // setTimeout(() => window.focus(), 10);
+        if (nextSlideNumber !== 0) {
+          setTimeout(() => changeName(nextSlide), 1000);
+        } else {
+          setTimeout(() => clearName(), 1000);
+        }
+       } else {
+        // event.preventDefault();
+        let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
+        let previousSlideNumber = parseInt(slide.dataset.number, 10) - 1;
+        let previousSlide = document.querySelector(`#page-${previousSlideNumber}`);
+        let y = previousSlide.offsetTop - navbarHeight;
+        // console.log(y);
+
+        // scroll
+        window.scrollTo({
+          top: y,
+          behavior: 'smooth'
+        })
+        // setTimeout(() => window.focus(), 100);
+        if (previousSlideNumber !== 0) {
+          setTimeout(() => changeName(previousSlide), 1000);
+        } else {
+          setTimeout(() => clearName(), 1000);
+        }
+       }
+
+      }, { capture: true,
+            passive: true
       })
-      setTimeout(() => window.focus(), 1000);
-      if (nextSlideNumber !== 0) {
-        setTimeout(() => changeName(nextSlide), 1000);
-      } else {
-        setTimeout(() => clearName(), 1000);
-      }
-     } else {
-      event.preventDefault();
-      let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
-      let previousSlideNumber = parseInt(slide.dataset.number, 10) - 1;
-      let previousSlide = document.querySelector(`#page-${previousSlideNumber}`);
-      let y = previousSlide.offsetTop - navbarHeight;
-      // console.log(y);
-
-      // scroll
-      window.scrollTo({
-        top: y,
-        behavior: 'smooth'
-      })
-      setTimeout(() => window.focus(), 1000);
-      if (previousSlideNumber !== 0) {
-        setTimeout(() => changeName(previousSlide), 1000);
-      } else {
-        setTimeout(() => clearName(), 1000);
-      }
-     }
-
-    })
   })
 }
 

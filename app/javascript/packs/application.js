@@ -3,7 +3,7 @@ import "bootstrap";
 import { loader } from "../components/loader";
 import { color } from "../components/color";
 import { scroll } from "../components/scroll";
-import { scrollTwo } from "../components/scrollTwo";
+import { test } from "../components/test";
 
 
 color();
@@ -13,7 +13,8 @@ if (document.querySelector(".loader")) {
 };
 
 scroll();
-// scrollTwo();
+// test();
+
 
 
 const hauteur = window.innerHeight;
