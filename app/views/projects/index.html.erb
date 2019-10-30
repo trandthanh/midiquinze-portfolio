@@ -3,22 +3,11 @@
     <div class="row">
       <% @projects.each do |project| %>
         <div class="midiquinze-card col-md-3 mb-30px">
-          <div class="height-192px" style="background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
-          <% if session[:color] == "black" %>
-            <div class="overlay-white">
-              <div class="text-black">
-                <h6 class="font-weight-700"><%= project.client.name.upcase %></h6>
-                <p class="mb-0"><%= project.time %></p>
-              </div>
-            </div>
-          <% else %>
-            <div class="overlay-black">
-              <div class="text-white">
-                <h6 class="font-weight-700"><%= project.client.name.upcase %></h6>
-                <p class="mb-0"><%= project.time %></p>
-              </div>
-            </div>
-          <% end %>
+          <div class="height-192px background-color-white d-flex align-items-center justify-content-center">
+            <%= image_tag project.logo, class: "height-50pc"%>
+          </div>
+          <%# if session[:color] == "black" %>
+          <div class="overlay-white" style="height: 192px; background-image: url('<%= rails_blob_url(project.thumbnail) %>'); background-position: center; background-size: cover;"></div>
         </div>
       <% end %>
     </div>
