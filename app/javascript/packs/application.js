@@ -2,7 +2,7 @@ import "bootstrap";
 
 import { loader } from "../components/loader";
 import { color } from "../components/color";
-import { clickScroll, firstPageScroll } from "../components/clickScroll";
+import { clickScroll, firstPageScroll, scrollTo } from "../components/clickScroll";
 import { mouse } from "../components/mouse";
 
 

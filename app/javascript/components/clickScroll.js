@@ -19,4 +19,5 @@ const firstPageScroll = () => {
   })
 }
 
+
 export { clickScroll, firstPageScroll };
