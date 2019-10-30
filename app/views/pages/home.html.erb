@@ -1,17 +1,19 @@
-<div id="page-0" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
-  <%= render 'pages/home/messages' %>
-</div>
-
-<% @projects.each do |project| %>
-  <div class="d-flex" style="width: max-content;">
-    <div id="page-<%= project.id %>" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= project.id %>" data-project="<%= project.client.name %>">
-      <div class="width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
-    </div>
-
-    <% project.photos.each do |project_photo| %>
-      <div class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh">
-        <div class="width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover;"></div>
-      </div>
-    <% end %>
+<div id="mq-home">
+  <div id="page-0" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
+    <%= render 'pages/home/messages' %>
   </div>
-<% end %>
+
+  <% @projects.each do |project| %>
+    <div class="d-flex" style="width: max-content;">
+      <div id="page-<%= project.id %>" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= project.id %>" data-project="<%= project.client.name %>">
+        <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
+      </div>
+
+      <% project.photos.each do |project_photo| %>
+        <div class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh">
+          <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover;"></div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
