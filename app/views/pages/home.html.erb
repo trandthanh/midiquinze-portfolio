@@ -1,5 +1,5 @@
 <div id="page-0" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
-  <div  style="height: calc(100vh - 8vh - 18vh); background-image: url(<%= image_path("midiquinze-home-banner.jpg") %>); background-position: bottom; background-size: cover;"></div>
+  <%= render 'pages/home/messages' %>
 </div>
 
 <% @projects.each do |project| %>

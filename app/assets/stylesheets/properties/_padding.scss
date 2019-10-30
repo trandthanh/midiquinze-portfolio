@@ -10,12 +10,16 @@
   padding-bottom: 24px !important;
 }
 
+.pb-50px {
+  padding-bottom: 50px;
+}
+
 .pb-8vh {
   padding-bottom: 8vh;
 }
 
-.pt-134px {
-  padding-top: 134px;
+.pb-36vh {
+  padding-bottom: 36vh;
 }
 
 .pl-100px {
@@ -26,13 +30,12 @@
   padding-right: 100px;
 }
 
-.px-100px {
-  padding-left: 100px;
-  padding-right: 100px;
+.pt-50px {
+  padding-top: 50px;
 }
 
-.pb-36vh {
-  padding-bottom: 36vh;
+.pt-134px {
+  padding-top: 134px;
 }
 
 .pt-16vh {
@@ -41,4 +44,9 @@
 
 .pt-18vh {
   padding-top: 18vh;
+}
+
+.px-100px {
+  padding-left: 100px;
+  padding-right: 100px;
 }
