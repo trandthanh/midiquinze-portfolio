@@ -3,11 +3,13 @@
     <div class="row">
       <% @projects.each do |project| %>
         <div class="midiquinze-card col-md-3 mb-30px">
-          <div class="height-192px background-color-white d-flex align-items-center justify-content-center">
-            <%= image_tag project.logo, class: "height-50pc"%>
-          </div>
-          <%# if session[:color] == "black" %>
-          <div class="overlay-white" style="height: 192px; background-image: url('<%= rails_blob_url(project.thumbnail) %>'); background-position: center; background-size: cover;"></div>
+          <%= link_to root_path(anchor: "page-#{project.id}") do  %>
+              <div class="height-192px background-color-white d-flex align-items-center justify-content-center">
+                <%= image_tag project.logo, class: "height-50pc"%>
+              </div>
+              <%# if session[:color] == "black" %>
+              <div class="overlay-white" style="height: 192px; background-image: url('<%= rails_blob_url(project.thumbnail) %>'); background-position: center; background-size: cover;"></div>
+          <% end %>
         </div>
       <% end %>
     </div>
