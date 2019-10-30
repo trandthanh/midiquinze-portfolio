@@ -6,19 +6,19 @@
     <% end %>
 
     <div class="midiquinze-navbar-items d-flex align-items-end">
-      <h6 class="midiquinze-navbar-links font-weight-400 link-white m-0">
+      <h6 class="midiquinze-navbar-links font-weight-400 m-0">
         <% if current_page?(projects_path) %>
-          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+          <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
         <% elsif current_page?(about_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+          <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
           <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
         <% elsif current_page?(contact_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none font-weight-700" %>
+          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
         <% elsif current_page?(root_path) %>
           <span id="project-name"></span><span id="slash" class="ml-16px"></span>
           <%= link_to "WORK", projects_path, class: "ml-16px mr-7px hover-border-bottom-white text-decoration-none"  %>
