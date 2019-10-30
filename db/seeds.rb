@@ -10,7 +10,7 @@ puts "Creating team members..."
 cléo = Member.create(name: "Cléo Barand", role: "ART DIRECTOR")
 romain = Member.create(name: "ROMAIN BELLEVILLE", role: "CREATIVE DIRECTOR + CO-FOUNDER")
 jérémie = Member.create(name: "JÉRÉMIE BŒGLIN", role: "CREATIVE DIRECTOR + CO-FOUNDER")
-gwendoline = Member.create(name: "GWENDOLINE role: RAVET", role: "CLIENT DIRECTOR")
-laura = Member.create(name: "LAURA JOVELIN", "ART DIRECTOR JR")
+gwendoline = Member.create(name: "GWENDOLINE RAVET", role: "CLIENT DIRECTOR")
+laura = Member.create(name: "LAURA JOVELIN", role: "ART DIRECTOR JR")
 léa = Member.create(name: "LÉA RETAILLEAU", role: "ASSISTANT ART DIRECTOR")
 puts "Done creating team members!"
