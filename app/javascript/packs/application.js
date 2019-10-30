@@ -2,7 +2,7 @@ import "bootstrap";
 
 import { loader } from "../components/loader";
 import { color } from "../components/color";
-import { clickScroll } from "../components/clickScroll";
+import { clickScroll, firstPageScroll } from "../components/clickScroll";
 import { mouse } from "../components/mouse";
 
 
@@ -15,6 +15,7 @@ if (document.querySelector(".loader")) {
 
 if (document.querySelector(".mq-home-arrow")) {
   clickScroll();
+  firstPageScroll();
 }
 
 
