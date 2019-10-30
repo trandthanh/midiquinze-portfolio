@@ -39,7 +39,8 @@
           </h1>
 
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#about-accordion">
+
+        <div id="collapseThree" class="collapse <%= "show" if params[:from] == "contact" %> " aria-labelledby="headingThree" data-parent="#about-accordion">
           <div class="mb-24px">
             <div class="d-flex">
               <div class="contact-category d-flex width-19px justify-content-between">

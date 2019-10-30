@@ -10,20 +10,20 @@
         <% if current_page?(projects_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <% elsif current_page?(about_path) %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) && params[:from].nil? %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-        <% elsif current_page?(contact_path) %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) && params[:from] == "contact" %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-white" %>
         <% elsif current_page?(root_path) %>
           <span id="project-name"></span><span id="slash" class="ml-16px"></span>
           <%= link_to "WORK", projects_path, class: "color-white ml-16px mr-7px hover-border-bottom-white text-decoration-none" %>
           <%= link_to "STUDIO", about_path, class: "color-white mx-7px hover-border-bottom-white text-decoration-none"  %>
-          <%= link_to "CONTACT", contact_path, class: "color-white mx-7px hover-border-bottom-white text-decoration-none" %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "color-white mx-7px hover-border-bottom-white text-decoration-none" %>
         <% else %>
         <% end %>
       </h6>
@@ -47,19 +47,19 @@
         <% if current_page?(projects_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
-        <% elsif current_page?(about_path) %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) && params[:from].nil? %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
-        <% elsif current_page?(contact_path) %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
+        <% elsif current_page?(about_path) && params[:from].nil? %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none color-ashgrey" %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-black text-decoration-none font-weight-700" %>
         <% else current_page?(root_path) %>
           <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-black text-decoration-none"  %>
           <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-black text-decoration-none"  %>
-          <%= link_to "CONTACT", contact_path, class: "mx-7px hover-border-bottom-black text-decoration-none" %>
+          <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-black text-decoration-none" %>
         <% end %>
       </h6>
 
