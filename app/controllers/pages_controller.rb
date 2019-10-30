@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def about
     @members = Member.all
+    @clients = Client.all
   end
 
   def contact
