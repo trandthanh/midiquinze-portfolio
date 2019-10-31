@@ -45,9 +45,16 @@ const clickVerticalHorizontal = () => {
 
         // up
         } else if (event.clientY < (windowHeight / 2)) {
-          document.querySelector(`.cover${previousNumber}`).scrollIntoView({
-            behavior: 'smooth'
-          })
+          if (slide == document.querySelector(`.cover${number}`)) {
+            document.querySelector(`.cover${previousNumber}`).scrollIntoView({
+              behavior: 'smooth'
+            })
+          } else {
+            console.log(`.cover${previousNumber}`);
+            document.querySelector(`.cover${previousNumber}`).scrollIntoView({
+              behavior: 'smooth'
+            })
+          }
 
         // down
         } else {
