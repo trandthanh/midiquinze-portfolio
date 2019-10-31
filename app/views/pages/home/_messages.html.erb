@@ -44,35 +44,26 @@
       CL'S BIRTHDAY!
     </h1>
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
-  <% elsif Time.now.hour >= 0 && Time.now.hour <= 4 %>
+  <% elsif (Time.now.hour <= 9 || Time.now.hour > 19) &&  %>
     <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
-      IL EST <%= Time.now.hour %>:<%= Time.now.min %>.
+      <% if Time.now.min < 10 %>
+        IL EST <%= Time.now.hour %>:0<%= Time.now.min %>.
+      <% else %>
+        IL EST <%= Time.now.hour %>:<%= Time.now.min %>.
+      <% end %>
       <br>
-      ET NOUS SOMMES FERMES.
-      <br>
-      OU VRAIMENT BLEUS.
-    </h1>
-    <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
-  <% elsif Time.now.hour >= 19 && Time.now.hour <= 0 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
-      IL EST <%= Time.now.hour %>:<%= Time.now.min %>.
-      <br>
-      ET NOUS SOMMES FERMES.
-      <br>
-      OU VRAIMENT BLEUS.
+      ET NOUS SOMMES <%= "fermés".upcase %>.
     </h1>
     <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
   <% else %>
     <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
-      <% if Time.now.min < 10 %>
+      <% if (Time.now.min < 10) %>
         IL EST <%= Time.now.hour %>:0<%= Time.now.min %>
       <% else %>
         IL EST <%= Time.now.hour %>:<%= Time.now.min %>
       <% end %>
       <br>
       ET NOUS SOMMES OUVERTS.
-      <br>
-      OU BLEU.
     </h1>
     <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
   <% end %>

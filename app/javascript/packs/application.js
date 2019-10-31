@@ -16,7 +16,7 @@ if (document.querySelector(".loader")) {
 if (document.querySelector(".page-0")) {
   clickScroll();
   firstPageScroll();
+  mouse();
 }
 
 
-mouse();
