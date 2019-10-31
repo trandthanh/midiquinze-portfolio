@@ -5,9 +5,11 @@
 
   <% @projects.each_with_index do |project, index| %>
     <div class="d-flex" style="width: max-content;">
-      <div id="<%= project.slug %>" class="slide page-<%= index + 1%> height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= index + 1 %>" data-project="<%= project.client.name %>">
+      <div id="<%= project.slug %>" class="slide page-<%= index + 1%> height-100vh pl-100px pr-100px pt-18vh pb-8vh position-relative" data-number="<%= index + 1 %>" data-project="<%= project.client.name %>">
         <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
-          <%= image_tag "" %>
+          <div>
+            <%= image_tag "mq-plus.png" %>
+          </div>
         </div>
       </div>
 
