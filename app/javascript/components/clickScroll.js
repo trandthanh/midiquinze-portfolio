@@ -30,30 +30,4 @@ const firstPageScroll = () => {
 }
 
 
-const withoutWheel = () => {
-  // const test = () => {
-  //   // event.preventDefault();
-  //   document.querySelector(".page-1").scrollIntoView({
-  //     behavior: 'smooth'
-  //   })
-  // }
-
-  // const no = () => {
-  //   const home = document.querySelector("#mq-home");
-  //   home.classList.remove("position-fixed");
-  // }
-  // const page0 = document.querySelector(".page-0");
-  // page0.addEventListener('wheel', (event) => {
-  //   // if (window.scrollY > 0) {
-  //     console.log(event);
-  //     // setTimeout(no, 100);
-  //     event.preventDefault();
-  //     setTimeout(test, 20);
-  //   // } else {
-  //   //   console.log('no')
-  //   // }
-  // })
-}
-
-
-export { clickScroll, firstPageScroll, withoutWheel };
+export { clickScroll, firstPageScroll };
