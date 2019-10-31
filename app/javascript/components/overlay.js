@@ -1,20 +1,38 @@
 const overlay = () => {
+
   /* Open when someone clicks on the span element */
-  function openNav() {
-    document.querySelector("#cover-27-rosiers").style.width = "50%";
+  function openNav(slide) {
+    let project = slide.dataset.project;
+    let diapo = slide.dataset.button;
+    let overlay = document.querySelector(`#overlay-${project}-${diapo}`);
+
+    overlay.style.width = "32%";
   }
 
   /* Close when someone clicks on the "x" symbol inside the overlay */
-  function closeNav() {
-    document.querySelector("#cover-27-rosiers").style.width = "0%";
+  function closeNav(slide) {
+    let project = slide.dataset.project;
+    let diapo = slide.dataset.button;
+    let overlay = document.querySelector(`#overlay-${project}-${diapo}`);
+
+    overlay.style.width = "0%";
   }
 
-  document.querySelector("#test-button").addEventListener('click', (event) => {
-    openNav();
-  })
+  const slides = document.querySelectorAll(".slide");
+  slides.forEach((slide) => {
+    let project = slide.dataset.project;
+    let diapo = slide.dataset.button;
+    let openBtn = document.querySelector(`#openbtn-${project}-${diapo}`);
+    let closeBtn = document.querySelector(`#closebtn-${project}-${diapo}`);
 
-  document.querySelector(".closebtn").addEventListener('click', (event) => {
-    closeNav();
+    openBtn.addEventListener('click', (event) => {
+      openNav(slide);
+    })
+
+    closeBtn.addEventListener('click', (event) => {
+      closeNav(slide);
+    })
+
   })
 }
 

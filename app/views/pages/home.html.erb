@@ -1,25 +1,47 @@
 <div id="mq-home">
-  <div class="slide page-0 height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
+  <div class="page-0 height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
     <%= render 'pages/home/messages' %>
   </div>
 
   <% @projects.each_with_index do |project, index| %>
     <div class="d-flex" style="width: max-content;">
-      <div id="<%= project.slug %>" class="slide page-<%= index + 1%> height-100vh pl-100px pr-100px pt-18vh pb-8vh position-relative" data-number="<%= index + 1 %>" data-project="<%= project.client.name %>">
-        <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
+      <div id="<%= project.slug %>" class="slide page-<%= index + 1%> height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= index + 1 %>" data-project="<%= project.slug %>" data-button="cover<%= index %>">
+        <div class="picture-slide position-relative width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
 
-          <%= image_tag "mq-plus.png", id:"test-button", class: "cursor-pointer height-24px position-absolute right-11pc top-21pc" %>
+          <%= image_tag "mq-plus.png", id: "openbtn-#{project.slug}-cover#{index}", class: "openbtn cursor-pointer height-24px position-absolute right-30px top-8pc" %>
 
-          <div id="cover-<%= project.slug %>" class="mq-overlay position-absolute" style="height: calc(100vh - 8vh - 18vh);">
+          <div id="overlay-<%= project.slug %>-cover<%= index %>" class="mq-overlay position-absolute" style="height: calc(100vh - 8vh - 18vh);">
             <div class="mq-overlay-content">
-              <a href="#">About</a>
-               <a href="#">Services</a>
-               <a href="#">Clients</a>
-               <a href="#">Contact</a>
-              <a class="closebtn color-white">&times;</a>
+
+              <%= image_tag "mq-plus.png", id: "closebtn-#{project.slug}-cover#{index}", class: "cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+
+
+              <div class="color-black font-weight-300 letter-spacing-1px px-20px py-72px">
+                <p class="m-0">
+                  <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
+                  <div>
+                    <% project.works.each do |project_work| %>
+                      <%= project_work.job.name.upcase %>
+                      <br>
+                    <% end %>
+                  </div>
+                  <div class="mt-50px">
+                    <%= project.description %>
+                  </div>
+                  <div class="mt-50px">
+                    En collaboration avec <%= project.collaborator.name %>
+                  </div>
+                  <div>
+                    Client: <%= project.client.name.upcase %>
+                  </div>
+                  <div>
+                    Crédits photos ©dzedjdao
+                  </div>
+                </p>
+
+              </div>
+
             </div>
-
-
           </div>
 
 
@@ -29,9 +51,47 @@
         </div>
       </div>
 
-      <% project.photos.each do |project_photo| %>
-        <div class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh">
-          <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover;">
+      <% project.photos.each_with_index do |project_photo, index| %>
+        <div class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-project="<%= project.slug %>" data-button="pano<%= index %>">
+          <div class="picture-slide position-relative width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover;">
+
+            <%= image_tag "mq-plus.png", id: "openbtn-#{project.slug}-pano#{index}", class: "openbtn cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+
+            <div id="overlay-<%= project.slug %>-pano<%= index %>" class="mq-overlay position-absolute" style="height: calc(100vh - 8vh - 18vh);">
+              <div class="mq-overlay-content">
+
+                <%= image_tag "mq-plus.png", id: "closebtn-#{project.slug}-pano#{index}", class: "cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+
+
+                <div class="color-black font-weight-300 letter-spacing-1px px-20px py-72px">
+                  <p class="m-0">
+                    <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
+                    <div>
+                      <% project.works.each do |project_work| %>
+                        <%= project_work.job.name.upcase %>
+                        <br>
+                      <% end %>
+                    </div>
+                    <div class="mt-50px">
+                      <%= project.description %>
+                    </div>
+                    <div class="mt-50px">
+                      En collaboration avec <%= project.collaborator.name %>
+                    </div>
+                    <div>
+                      Client: <%= project.client.name.upcase %>
+                    </div>
+                    <div>
+                      Crédits photos ©dzedjdao
+                    </div>
+                  </p>
+
+                </div>
+
+              </div>
+            </div>
+
+
 
           </div>
         </div>
