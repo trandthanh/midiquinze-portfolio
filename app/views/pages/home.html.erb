@@ -3,9 +3,9 @@
     <%= render 'pages/home/messages' %>
   </div>
 
-  <% @projects.each do |project| %>
+  <% @projects.each_with_index do |project, index| %>
     <div class="d-flex" style="width: max-content;">
-      <div id="page-<%= project.id %>" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= project.id %>" data-project="<%= project.client.name %>">
+      <div id="page-<%= index + 1%>" class="slide height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="<%= index + 1 %>" data-project="<%= project.client.name %>">
         <div class="picture-slide width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;"></div>
       </div>
 
