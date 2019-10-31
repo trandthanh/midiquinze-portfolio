@@ -13,7 +13,7 @@ if (document.querySelector(".loader")) {
 };
 
 
-if (document.querySelector(".mq-home-arrow")) {
+if (document.querySelector(".page-0")) {
   clickScroll();
   firstPageScroll();
 }

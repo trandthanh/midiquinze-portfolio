@@ -3,7 +3,7 @@
     <div class="row">
       <% @projects.each do |project| %>
         <div class="midiquinze-card col-md-3 mb-30px">
-          <%= link_to root_path(anchor: "page-#{project.id}") do  %>
+          <%= link_to root_path(anchor: "#{project.slug}") do  %>
               <div class="height-192px background-color-white d-flex align-items-center justify-content-center">
                 <%= image_tag project.logo, class: "height-50pc"%>
               </div>

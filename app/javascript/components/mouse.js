@@ -5,6 +5,14 @@ const mouse = () => {
     // console.log(event.clientX);
     // console.log(event.clientY);
 
+    const home = document.querySelector(".page-0");
+    if (event.clientY > (windowHeight / 2)) {
+      home.classList.add("cursor-white-down-arrow");
+    } else {
+      home.classList.remove("cursor-white-down-arrow");
+    }
+
+
     const slides = document.querySelectorAll(".picture-slide");
 
     slides.forEach((slide) => {
