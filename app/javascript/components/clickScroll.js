@@ -12,12 +12,17 @@ const clickScroll = () => {
 }
 
 const firstPageScroll = () => {
+  let alreadyFire = false;
   const pageZero = document.querySelector(".page-0");
-  pageZero.addEventListener('wheel', (event) => {
-    // event.preventDefault();
-    // document.querySelector("#page-1").scrollIntoView({
-    //   behavior: 'smooth'
-    // })
+  pageZero.addEventListener('mousewheel', (event) => {
+    // if (alreadyFire) { return null };
+    console.log(event)
+    event.preventDefault();
+    document.querySelector(".page-1").scrollIntoView({
+      behavior: 'smooth'
+    })
+    alreadyFire = true;
+    // je vais à l'ancre
   })
 }
 
