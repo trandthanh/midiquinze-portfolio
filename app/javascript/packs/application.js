@@ -7,6 +7,7 @@ import { mouse } from "../components/mouse";
 import { overlay } from "../components/overlay";
 import { debounce } from "../components/debounce";
 import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
+import { scrollVerticalHorizontal } from "../components/scrollVerticalHorizontal";
 // import _ from "underscore";
 
 // import { updateLayout } from "../components/debounceUnderscore";
@@ -31,13 +32,13 @@ if (document.querySelector(".cover0")) {
   const pageZero = document.querySelector(".cover0");
   pageZero.addEventListener("wheel", (e) => {
     e.preventDefault();
-    console.log(e);
     debounce(scrollZero(), 0, true);
   });
 }
 
 if (document.querySelector("#mq-home")) {
   clickVerticalHorizontal();
+  scrollVerticalHorizontal();
 }
 
 
