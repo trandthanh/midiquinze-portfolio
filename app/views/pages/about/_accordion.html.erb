@@ -1,0 +1,120 @@
+<div id="about-accordion" class="accordion mb-100px mt-50px" >
+
+  <div class="" id="headingOne">
+    <h1 class="font-family-DINpro font-size-34px" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      TEAM
+    </h1>
+  </div>
+  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#about-accordion"> <!-- add class show if needed -->
+    <div class="mb-24px">
+      <% @members.each do |member| %>
+        <p class="letter-spacing-1px m-0"><span><%= member.name.upcase %></span>  /  <span class="font-size-11px"><%= member.role.upcase %></span></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="" id="headingTwo">
+    <h1 class="font-family-DINpro font-size-34px" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+      CLIENTS
+    </h1>
+  </div>
+  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#about-accordion">
+    <div class="mb-24px">
+      <p class="letter-spacing-1px">
+        <% @clients.each do |client| %>
+          <%= client.name.upcase %> <%= "/" unless client == @clients.last %>
+        <% end %>
+      </p>
+    </div>
+  </div>
+
+  <div class="" id="headingThree">
+    <h1 class="font-family-DINpro font-size-34px" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      CONTACT
+    </h1>
+
+  </div>
+
+  <div id="collapseThree" class="collapse <%= "show" if params[:from] == "contact" %> " aria-labelledby="headingThree" data-parent="#about-accordion">
+    <div class="mb-24px">
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content">ADDRESS</p>
+          <p>:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0">33 RUE DES PETITES ÉCURIES<br>75010 PARIS — FRANCE<br>48.873722 — 2.350881</p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">MAIL</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= mail_to "HELLO@MIDIQUINZE.COM", "HELLO@MIDIQUINZE.COM", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">INSTAGRAM</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= link_to "@MIDI.QUINZE", "https://www.instagram.com/midi.quinze/", target: "_blank", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">BEHANCE</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= link_to "BEHANCE.NET/MIDIQUINZE/", "https://www.behance.net/midiquinze", target: "_blank", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">FACEBOOK</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= link_to "FACEBOOK.COM/MIDIQUINZEPARIS/", "https://www.facebook.com/midiquinzeparis/", target: "_blank", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">LINKEDIN</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= link_to "LINKEDIN.COM/COMPANY/MIDI-QUINZE/", "https://www.linkedin.com/company/midi-quinze/", target: "_blank", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+      <div class="d-flex">
+        <div class="contact-category d-flex width-24pc justify-content-between">
+          <p class="<%= session[:color] == "black" ? "border-bottom-1px-solid-white" : "border-bottom-1px-solid-black" %> height-max-content m-0">MINITEL</p>
+          <p class="m-0">:</p>
+        </div>
+
+        <div class="contact-info pl-20px">
+          <p class="m-0"><%= link_to "1215", "#", target: "_blank", class: "text-decoration-none #{session[:color] == "black" ? "color-white" : "color-black"}" %> </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
