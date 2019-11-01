@@ -14,7 +14,7 @@ const scrollVerticalHorizontal = () => {
   }
 
   const stopClickPropagation = (element) => {
-    element.addEventListener("click", (event) => {
+    element.addEventListener("wheel", (event) => {
       event.stopPropagation(); //this is important! If removed, you'll get both alerts
     }, false);
   }
@@ -22,7 +22,7 @@ const scrollVerticalHorizontal = () => {
   const stopOverlayPropagation = (openButton, closeButton, overlayArea) => {
     stopClickPropagation(openButton);
     stopClickPropagation(closeButton);
-    stopClickPropagation(overlayArea);
+    // stopClickPropagation(overlayArea);
   }
 
   slides.forEach((slide) => {

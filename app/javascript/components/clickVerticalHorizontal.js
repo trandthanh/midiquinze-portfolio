@@ -48,7 +48,7 @@ const clickVerticalHorizontal = () => {
       slide.addEventListener('click', (event) => { // click on last row cover
 
         if (event.clientX < (windowWidth / 3)) { // left on the cover
-          // nothing to do
+          scrollIntoViewSlide(`.cover${previousNumber}`);
         } else if (event.clientX > (windowWidth / 3 * 2)) { // right
           scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
         } else if (event.clientY < (windowHeight / 2)) { // up
@@ -68,7 +68,7 @@ const clickVerticalHorizontal = () => {
         if (event.clientX < (windowWidth / 3)) { // left
 
           if (slide == document.querySelector(`.cover${number}`)) { // left on the cover
-            // nothing to do
+            scrollIntoViewSlide(`.cover${previousNumber}`);
           } else { // other slides
             scrollIntoViewSlide(`.pano${previousPanoIndex}-${project}`);
           }
