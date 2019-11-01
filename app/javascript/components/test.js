@@ -56,7 +56,7 @@ export { test };
 
   // slides.forEach((slide) => {
   //   slide.addEventListener('wheel', (event) => {
-  //     document.getElementById("page-0").animate([
+  //     document.getElementById("cover0").animate([
   //       // keyframes
   //       { transform: 'translateY(0px)' },
   //       { transform: 'translateY(-300px)' }

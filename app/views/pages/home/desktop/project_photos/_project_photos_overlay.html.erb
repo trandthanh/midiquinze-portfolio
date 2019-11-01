@@ -1,0 +1,32 @@
+<div id="overlay-<%= project.slug %>-pano<%= index %>" class="mq-overlay <% if session[:color] == "black" %> <%= "background-color-white" %> <% else %> <%= "background-color-black" %> <% end %> position-absolute" style="height: calc(100vh - 8vh - 18vh);">
+  <div class="mq-overlay-content">
+
+    <%= image_tag session[:color] == "black" ? "mq-cross.png" : "mq-cross-white.png", id: "closebtn-#{project.slug}-pano#{index}", class: "cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+
+    <div class="<% if session[:color] == "black" %> <%= "color-black" %> <% else %> <%= "color-white" %> <% end %> font-weight-300 letter-spacing-1px px-20px py-72px">
+      <p class="m-0">
+        <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
+        <div>
+          <% project.works.each do |project_work| %>
+            <%= project_work.job.name.upcase %>
+            <br>
+          <% end %>
+        </div>
+        <div class="mt-50px">
+          <%= project.description %>
+        </div>
+        <div class="mt-50px">
+          En collaboration avec <%= project.collaborator.name %>
+        </div>
+        <div>
+          Client: <%= project.client.name.upcase %>
+        </div>
+        <div>
+          Crédits photos ©dzedjdao
+        </div>
+      </p>
+    </div>
+
+  </div>
+</div>
+

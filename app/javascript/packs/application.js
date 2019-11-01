@@ -18,20 +18,20 @@ if (document.querySelector(".loader")) {
 };
 
 
-if (document.querySelector(".page-0")) {
+if (document.querySelector(".cover0")) {
   clickScroll();
   // firstPageScroll();
   mouse();
   const scrollZero = () => {
-    document.querySelector(".page-1").scrollIntoView({
+    document.querySelector(".cover1").scrollIntoView({
       behavior: 'smooth'
     })
   }
 
-  const pageZero = document.querySelector(".page-0");
+  const pageZero = document.querySelector(".cover0");
   pageZero.addEventListener("wheel", (e) => {
     e.preventDefault();
-    // console.log(e);
+    console.log(e);
     debounce(scrollZero(), 0, true);
   });
 }

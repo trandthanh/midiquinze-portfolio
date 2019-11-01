@@ -1,0 +1,34 @@
+<div class="midiquinze-navbar <%= "background-color-black" if current_page?(about_path) %> d-flex height-18vh justify-content-between letter-spacing-1px mt-neg1px position-fixed pb-3pc px-100px width-100pc z-index-100">
+
+  <%= link_to root_path, class: "width-50pc" do %>
+    <%= image_tag 'mq_logoblanc.png', class: "height-auto width-72pc" %>
+  <% end %>
+
+  <div class="midiquinze-navbar-items d-flex align-items-end">
+    <h6 class="midiquinze-navbar-links font-weight-400 m-0">
+      <% if current_page?(projects_path) %>
+        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white pb-2px" %>
+        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+      <% elsif current_page?(about_path) && params[:from].nil? %>
+        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-white pb-2px" %>
+        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+      <% elsif current_page?(about_path) && params[:from] == "contact" %>
+        <%= link_to "WORK", projects_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+        <%= link_to "STUDIO", about_path, class: "mx-7px hover-border-bottom-white text-decoration-none color-ashgrey pb-2px" %>
+        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "mx-7px hover-border-bottom-white text-decoration-none color-white pb-2px" %>
+      <% elsif current_page?(root_path) %>
+        <span id="project-name"></span><span id="slash" class="ml-16px"></span>
+        <%= link_to "WORK", projects_path, class: "color-white ml-16px mr-7px hover-border-bottom-white text-decoration-none pb-2px" %>
+        <%= link_to "STUDIO", about_path, class: "color-white mx-7px hover-border-bottom-white text-decoration-none pb-2px"  %>
+        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "color-white mx-7px hover-border-bottom-white text-decoration-none pb-2px" %>
+      <% else %>
+      <% end %>
+    </h6>
+
+    <%= link_to change_color_path, method: :post do %>
+      <div class="color-button color-button-white height-13px width-13px border-radius-50pc mb-3px ml-7px mr-7px"></div>
+    <% end %>
+  </div>
+</div>

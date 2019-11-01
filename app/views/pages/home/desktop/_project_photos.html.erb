@@ -1,0 +1,11 @@
+<% project.photos.each_with_index do |project_photo, index| %>
+  <div class="slide pano<%= index + 1 %>-<%= project.slug %> height-100vh pb-8vh pl-100px pr-100px pt-18vh" data-button="pano<%= index %>" data-project="<%= project.slug %>" data-number="<%= project_index + 1 %>" data-pano-index="<%= index + 1%>" data-pano-count="<%= project.photos.count %>">
+    <div class="picture-slide position-relative width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover;">
+
+      <%= image_tag "mq-plus.png", id: "openbtn-#{project.slug}-pano#{index}", class: "openbtn cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+
+      <%= render partial: 'pages/home/desktop/project_photos/project_photos_overlay', locals: {project: project, index: index} %>
+
+    </div>
+  </div>
+<% end %>

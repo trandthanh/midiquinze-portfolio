@@ -54,7 +54,13 @@
       <br>
       ET NOUS SOMMES <%= "fermés".upcase %>.
     </h1>
-    <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
+
+    <% if session[:color] == "black" %>
+      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <% else %>
+      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "black-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <% end %>
+
   <% else %>
     <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
       <% if (Time.now.min < 10) %>
@@ -67,7 +73,11 @@
       <br>
       OU BLEUS.
     </h1>
-    <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <% if session[:color] == "black" %>
+      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <% else %>
+      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "black-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <% end %>
   <% end %>
 
 <!--   <div class="d-flex justify-content-center pt-50px">
