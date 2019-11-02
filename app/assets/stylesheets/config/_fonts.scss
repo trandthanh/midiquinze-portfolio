@@ -16,8 +16,8 @@ $headers-font: "Roboto Condensed", "Helvetica", "sans-serif";
 // }
 // $my-font: "Font Name";
 
-// @font-face {
-//   font-family: 'DIN Pro';
-//   src: font-url('DINPro-CondBlack.otf');
-// }
-// $my-font: "DIN Pro";
+@font-face {
+  font-family: 'DIN Pro';
+  src: font-url('DINPro-CondBlack.otf');
+}
+$din-pro: "DIN Pro";
