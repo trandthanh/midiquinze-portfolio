@@ -1,16 +1,28 @@
 <!-- The overlay -->
-<div id="midiquinze-mobile-navbar-overlay" class="mobile-navbar-overlay">
+<div id="midiquinze-mobile-navbar-overlay" class="mobile-navbar-overlay d-flex flex-column justify-content-around <%= session[:color] == "black" ? "background-color-black" : "background-color-white" %>">
 
   <!-- Overlay content -->
   <div class="mobile-navbar-overlay-content">
     <%= link_to projects_path do %>
-      <h1 class="color-white">WORK</h1>
+      <h1 class="<%= session[:color] == "black" ? "color-white" : "color-black" %> m-0">WORK</h1>
     <% end %>
     <%= link_to about_path do %>
-      <h1 class="color-white">STUDIO</h1>
+      <h1 class="<%= session[:color] == "black" ? "color-white" : "color-black" %> m-0">STUDIO</h1>
     <% end %>
     <%= link_to about_path do %>
-      <h1 class="color-white">CONTACT</h1>
+      <h1 class="<%= session[:color] == "black" ? "color-white" : "color-black" %> m-0">CONTACT</h1>
+    <% end %>
+  </div>
+
+  <div class="mobile-navbar-overlay-footer d-flex align-items-center <%= session[:color] == "black" ? "color-white" : "color-black" %> height-8vh px-8pc">
+    <div class="mobile-navbar-overlay-footer-social d-flex width-100pc">
+      <i class="fab fa-instagram font-size-24px mr-8pc"></i>
+      <i class="fab fa-behance font-size-24px mr-8pc"></i>
+      <i class="fab fa-linkedin-in font-size-24px"></i>
+    </div>
+
+    <%= link_to change_color_path, method: :post do %>
+      <div class="color-button <%= session[:color] == "black" ? "color-button-white" : "color-button-black" %> height-20px width-20px border-radius-50pc"></div>
     <% end %>
   </div>
 
