@@ -8,6 +8,7 @@ import { overlay } from "../components/overlay";
 import { debounce } from "../components/debounce";
 import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
 import { scrollVerticalHorizontal } from "../components/scrollVerticalHorizontal";
+import { mobileOverlay } from "../components/mobileOverlay";
 // import _ from "underscore";
 
 // import { updateLayout } from "../components/debounceUnderscore";
@@ -44,6 +45,7 @@ if (document.querySelector("#mq-home")) {
 
 color();
 overlay();
+mobileOverlay();
 
 
 
