@@ -1,0 +1,9 @@
+<div class="mq-home-mobile-projects-wrapper pt-16pc">
+  <% projects.each do |project| %>
+
+    <div class="mq-home-mobile-project-cover height-32vh" style="background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
+    </div>
+
+
+  <% end %>
+</div>

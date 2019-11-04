@@ -3,10 +3,9 @@
     <%= render 'pages/home/messages' %>
   </div>
 
-  <%= render partial: 'pages/home/desktop/projects', locals: {projects: @projects} %>
+  <%= render partial: 'pages/home/desktop/projects', locals: { projects: @projects } %>
 </div>
 
 <div id="mq-home-mobile">
-
-
+  <%= render partial: 'pages/home/mobile/mobile_projects', locals: { projects: @projects } %>
 </div>
