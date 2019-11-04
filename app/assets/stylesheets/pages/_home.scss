@@ -1,5 +1,29 @@
 // Specific CSS for your home-page
 
+@include media-breakpoint-only(xs) {
+  #mq-home {
+    display: none !important;
+  }
+
+}
+@include media-breakpoint-only(sm) {
+
+}
+@include media-breakpoint-only(md) {
+
+}
+@include media-breakpoint-only(lg) {
+  #mq-home-mobile {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  #mq-home-mobile {
+    display: none !important;
+  }
+}
+
 .loader {
   animation-duration: 5s;
   animation-name: slidein;
@@ -15,16 +39,4 @@
   to {
     opacity: 0;
   }
-}
-
-.slide {
-  // margin-bottom: 36vh;
-  // &:last-child{
-  //   margin-bottom: 8vh;
-  // }
-}
-
-
-#mq-home {
-width: 100%;
 }

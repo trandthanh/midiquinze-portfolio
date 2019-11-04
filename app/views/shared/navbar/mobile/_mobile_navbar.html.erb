@@ -1,0 +1,9 @@
+<div class="midiquinze-navbar-mobile d-flex align-items-end justify-content-around ">
+  <%= link_to root_path, class: "" do %>
+    <%= image_tag 'mq_logoblanc.png', class: "height-8vh width-56vw" %>
+  <% end %>
+
+  <i id="<%= session[:color] == "black" ? "black-burger-openbtn" : "white-burger-openbtn" %>" class="fas fa-bars color-white font-size-32px"></i>
+
+  <%= render 'shared/navbar/mobile/mobile_navbar/mobile_navbar_overlay' %>
+</div>

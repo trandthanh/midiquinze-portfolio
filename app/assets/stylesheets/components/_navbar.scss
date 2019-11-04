@@ -1,3 +1,27 @@
+@include media-breakpoint-only(xs) {
+  .midiquinze-navbar {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-only(sm) {
+
+}
+@include media-breakpoint-only(md) {
+
+}
+@include media-breakpoint-only(lg) {
+  .midiquinze-navbar-mobile {
+    display: none !important;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .midiquinze-navbar-mobile {
+    display: none !important;
+  }
+}
+
+
 .link-white {
   a {
     color: white;
