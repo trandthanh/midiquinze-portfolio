@@ -9,7 +9,9 @@ const scrollVerticalHorizontal = () => {
 
   const scrollIntoViewSlide = (selector) => {
     document.querySelector(selector).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: "center",
+      inline: "end"
     })
   }
 
@@ -80,7 +82,7 @@ const scrollVerticalHorizontal = () => {
             debounce(scrollIntoViewSlide(`.cover${previousNumber}`), 0, true);
           } else { // other slides
             event.preventDefault();
-            debounce(scrollIntoViewSlide(`.pano${previousPanoIndex}-${project}`), 0, true);
+            scrollIntoViewSlide(`.pano${previousPanoIndex}-${project}`);
           }
 
         } else if (event.deltaX > 0) { // right

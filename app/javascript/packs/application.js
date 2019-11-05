@@ -39,7 +39,7 @@ if (document.querySelector(".cover0")) {
 
 if (document.querySelector("#mq-home")) {
   clickVerticalHorizontal();
-  // scrollVerticalHorizontal();
+  scrollVerticalHorizontal();
 }
 
 
