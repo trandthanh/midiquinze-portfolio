@@ -1,5 +1,5 @@
 <% projects.each_with_index do |project, project_index| %>
-  <div class="d-flex" style="">
+  <div id="<%= project.slug %>" class="d-flex" style="">
 
       <div class="width-100vw" style="height: 100vh; background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover; display: inline-block; flex-shrink: 0;"></div>
 
