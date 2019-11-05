@@ -3,3 +3,7 @@
 <% else %>
   <%= render 'shared/footer/desktop/white' %>
 <% end %>
+
+<% if current_page?(projects_path) %>
+  <%= render 'shared/footer/mobile/mobile_footer' %>
+<% end %>
