@@ -2,11 +2,14 @@ const clickVerticalHorizontal = () => {
   const slides = document.querySelectorAll(".slide");
   const windowHeight = window.innerHeight;
   const windowWidth = window.innerWidth;
+  const pictureWidth = document.querySelector(".picture-slide").offsetWidth;
   const numberOfProjects = parseInt(document.querySelector("#mq-home").dataset.projectCount, 10);
 
   const scrollIntoViewSlide = (selector) => {
     document.querySelector(selector).scrollIntoView({
-      behavior: 'smooth'
+      behavior: 'smooth',
+      block: "center",
+      inline: "end"
     })
   }
 
@@ -73,11 +76,15 @@ const clickVerticalHorizontal = () => {
             scrollIntoViewSlide(`.pano${previousPanoIndex}-${project}`);
           }
 
-        } else if (event.clientX > (windowWidth / 3 * 2)) { // right
+        } else if (event.clientX > (pictureWidth / 3 * 2)) { // right
+          // console.log(pictureWidth / 3 * 2);
+          // console.log(event.clientX);
+          console.log(event.clientX > (pictureWidth / 3 * 2));
 
           if (panoIndex == numberOfSlides) { // last slide on row
             scrollIntoViewSlide(`.cover${number}`);
           } else { // other slides
+            console.log(document.querySelector(`.pano${nextPanoIndex}-${project}`));
             scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
           }
 

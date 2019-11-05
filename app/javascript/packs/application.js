@@ -34,12 +34,12 @@ if (document.querySelector(".cover0")) {
   pageZero.addEventListener("wheel", (e) => {
     e.preventDefault();
     debounce(scrollZero(), 0, true);
-  });
+  }, {passive: true});
 }
 
 if (document.querySelector("#mq-home")) {
   clickVerticalHorizontal();
-  scrollVerticalHorizontal();
+  // scrollVerticalHorizontal();
 }
 
 
