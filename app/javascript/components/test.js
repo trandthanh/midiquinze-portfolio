@@ -18,6 +18,9 @@ const test = () => {
     });
   }
 
+  // window.addEventListener
+  // querySelector(gros truc).style.transform =
+
   const scrollUp = (slide) => {
     let navbarHeight = document.querySelector(".midiquinze-navbar").offsetHeight;
     let previousSlideNumber = parseInt(slide.dataset.number, 10) - 1;
