@@ -1,7 +1,7 @@
 <div class="mq-home-messages d-flex flex-column height-100pc justify-content-center">
 
   <% if Time.now.hour == 12 && Time.now.min == 15 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       BONJOUR
       <br>
       WE ARE <%= Time.now.hour %>:<%= Time.now.min %>, A FRENCH
@@ -10,7 +10,7 @@
     </h1>
     <h4 class="letter-spacing-1px">(SORRY, WE DON'T SERVE FOOD)</h4>
   <% elsif Date.today.month == 12 && Date.today.day == 12 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE CELEBRATING
@@ -19,7 +19,7 @@
     </h1>
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
   <% elsif Date.today.month == 12 && Date.today.day == 15 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE CELEBRATING
@@ -28,7 +28,7 @@
     </h1>
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
   <% elsif Date.today.month == 12 && Date.today.day == 25 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       IT'S <%= Date.today.month %> <%= Date.today.day %>TH.
       <br>
       WE ARE CLOSED.
@@ -36,7 +36,7 @@
     </h1>
     <h4 class="letter-spacing-1px">(MERRY CHRISTMAS)</h4>
   <% elsif Date.today.month == 11 && Date.today.day == 19 %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       IT'S <%= Date.today.month %> <%= Date.today.day %>TH.
       <br>
       WE ARE CELEBRATING
@@ -45,7 +45,7 @@
     </h1>
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
   <% elsif (Time.now.hour <= 9 || Time.now.hour > 19) &&  %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       <% if Time.now.min < 10 %>
         IL EST <%= Time.now.hour %>:0<%= Time.now.min %>.
       <% else %>
@@ -55,14 +55,10 @@
       ET NOUS SOMMES <%= "fermés".upcase %>.
     </h1>
 
-    <% if session[:color] == "black" %>
-      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
-    <% else %>
-      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "black-smiley.png", class: "height-20px mb-5px" %>)</h4>
-    <% end %>
+    <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "#{opposite_color}-smiley.png", class: "height-20px mb-5px" %>)</h4>
 
   <% else %>
-    <h1 class="font-family-DINpro font-size-64px mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
       <% if (Time.now.min < 10) %>
         IL EST <%= Time.now.hour %>:0<%= Time.now.min %>
       <% else %>
@@ -73,11 +69,7 @@
       <br>
       OU BLEUS.
     </h1>
-    <% if session[:color] == "black" %>
-      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "white-smiley.png", class: "height-20px mb-5px" %>)</h4>
-    <% else %>
-      <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "black-smiley.png", class: "height-20px mb-5px" %>)</h4>
-    <% end %>
+    <h4 class="letter-spacing-1px">(FRENCH JOKE <%= image_tag "#{opposite_color}-smiley.png", class: "height-20px mb-5px" %>)</h4>
   <% end %>
 
 <!--   <div class="d-flex justify-content-center pt-50px">

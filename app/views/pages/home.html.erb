@@ -1,6 +1,6 @@
 <div id="mq-home" class="width-100pc" data-color="<%= session[:color] %>" data-project-count="<%= @projects.size %>">
   <div id="" class="cover0 height-100vh pl-100px pr-100px pt-18vh pb-8vh" data-number="0" data-project="not-a-project">
-    <%= render 'pages/home/messages' %>
+    <%= render partial: 'pages/home/messages', locals: { opposite_color: @opposite_color } %>
   </div>
 
   <%= render partial: 'pages/home/desktop/projects', locals: { projects: @projects } %>

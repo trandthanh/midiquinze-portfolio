@@ -25,10 +25,16 @@ class ProjectsController < ApplicationController
     if session[:color].nil?
       session[:color] = "black"
       @colors = "background-color-black color-white"
+      @background_color = "background-color-black"
+      @opposite_color = "white"
     elsif session[:color] == "black"
       @colors = "background-color-black color-white"
+      @background_color = "background-color-black"
+      @opposite_color = "white"
     else
       @colors = "background-color-white color-black"
+      @background_color = "background-color-white"
+      @opposite_color = "black"
     end
   end
 end

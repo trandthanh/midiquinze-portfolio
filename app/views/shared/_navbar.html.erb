@@ -1,9 +1,4 @@
-<% if session[:color] == "black" %>
-  <%= render 'shared/navbar/desktop/black' %>
-<% else %>
-  <%= render 'shared/navbar/desktop/white' %>
-<% end %>
-
+<%= render partial: 'shared/navbar/desktop/desktop_navbar', locals: { background_color: @background_color, opposite_color: @opposite_color } %>
 
 <%= render 'shared/navbar/mobile/mobile_navbar' %>
 

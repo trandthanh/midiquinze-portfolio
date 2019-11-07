@@ -1,8 +1,4 @@
-<% if session[:color] == "black" %>
-  <%= render 'shared/footer/desktop/black' %>
-<% else %>
-  <%= render 'shared/footer/desktop/white' %>
-<% end %>
+<%= render partial: 'shared/footer/desktop/desktop_footer', locals: { background_color: @background_color, opposite_color: @opposite_color } %>
 
 <% if current_page?(projects_path) %>
   <%= render 'shared/footer/mobile/mobile_footer' %>

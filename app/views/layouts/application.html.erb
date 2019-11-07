@@ -9,16 +9,15 @@
     <%= stylesheet_link_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <% if current_page?(root_path) && session[:color].nil? %>
-    <% session[:color] = "black" %>
-  <% end %>
-  <body id="scroll-page" class="<%= @colors %>">
-    <% if current_page?(root_path) && session[:visited_before].nil? %>
-      <div id="midiquinze-gif-loader" class="background-color-black height-100vh text-align-center">
-        <%= image_tag "loader-midiquinze.gif", class: "loader height-400px margin-top-10pc" %>
-      </div>
-    <% end %>
+
+  <% set_session_color %>
+
+  <body class="<%= @colors %>">
     <%#= render 'shared/flashes' %>
+    <% if current_page?(root_path) && session[:visited_before].nil? %>
+      <%= render partial: 'shared/loader/loader', locals: { background_color: @background_color } %>
+    <% end %>
+
     <div id="midiquinze-main" class="<%= (current_page?(root_path) && session[:visited_before].nil?) ? 'display-none' : '' %>">
       <%= render 'shared/navbar' %>
         <%= yield %>
