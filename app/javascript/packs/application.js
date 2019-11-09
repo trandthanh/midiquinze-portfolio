@@ -9,6 +9,7 @@ import { debounce } from "../components/debounce";
 import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
 import { scrollVerticalHorizontal } from "../components/scrollVerticalHorizontal";
 import { mobileOverlay } from "../components/mobileOverlay";
+import { glitch } from "../components/glitch";
 // import _ from "underscore";
 
 // import { updateLayout } from "../components/debounceUnderscore";
@@ -34,18 +35,20 @@ if (document.querySelector(".cover0")) {
   pageZero.addEventListener("wheel", (e) => {
     e.preventDefault();
     debounce(scrollZero(), 0, true);
-  }, {passive: true});
+  });
 }
 
 if (document.querySelector("#mq-home")) {
   clickVerticalHorizontal();
-  scrollVerticalHorizontal();
+  // scrollVerticalHorizontal();
 }
 
 
 color();
 overlay();
 mobileOverlay();
+
+glitch();
 
 
 
