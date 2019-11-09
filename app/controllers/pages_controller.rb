@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:home, :about, :contact, :change_color]
-  before_action :set_color, only: [:home, :about, :contact, :change_color]
+  before_action :set_color_variables, only: [:home, :about, :contact, :change_color]
 
   def home
     loading_session
@@ -31,26 +31,6 @@ class PagesController < ApplicationController
 
   private
 
-  def set_color
-    if session[:color].nil?
-      session[:color] = "black"
-      @colors = "background-color-black color-white"
-      @color = "black"
-      @background_color = "background-color-black"
-      @opposite_color = "white"
-    elsif session[:color] == "white"
-      session[:color] = "white"
-      @colors = "background-color-white color-black"
-      @color = "white"
-      @background_color = "background-color-white"
-      @opposite_color = "black"
-    else
-      @colors = "background-color-black color-white"
-      @color = "black"
-      @background_color = "background-color-black"
-      @opposite_color = "white"
-    end
-  end
 
   def loading_session
     if session.key?(:visited_before)

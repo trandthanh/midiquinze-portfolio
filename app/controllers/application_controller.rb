@@ -7,4 +7,25 @@ class ApplicationController < ActionController::Base
     helpers.set_session_color
   end
 
+  def set_color_variables
+    if session[:color].nil?
+      session[:color] = "black"
+      @colors = "background-color-black color-white"
+      @color = "black"
+      @background_color = "background-color-black"
+      @opposite_color = "white"
+    elsif session[:color] == "white"
+      session[:color] = "white"
+      @colors = "background-color-white color-black"
+      @color = "white"
+      @background_color = "background-color-white"
+      @opposite_color = "black"
+    else
+      @colors = "background-color-black color-white"
+      @color = "black"
+      @background_color = "background-color-black"
+      @opposite_color = "white"
+    end
+  end
+
 end

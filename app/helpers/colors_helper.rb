@@ -9,4 +9,6 @@ module ColorsHelper
       session[:color] = "white"
     end
   end
+
+
 end
