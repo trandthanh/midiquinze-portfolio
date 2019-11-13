@@ -1,7 +1,10 @@
 .hover-border-bottom-white {
   &:hover {
-    border-bottom: 1px solid white;
     color: white;
+    opacity: 1;
+    &:after {
+      width: 100%;
+    }
   }
 }
 
@@ -10,11 +13,24 @@
   &:hover {
     border-bottom: 1px solid black;
     color: black;
+    opacity: 1;
   }
 }
 
 .hover-black {
   &:hover {
     color: black;
+    opacity: 1;
   }
 }
+
+.desktop-navbar-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+}
+
+
