@@ -21,6 +21,7 @@ class ApplicationController < ActionController::Base
       @background_color = "background-color-white"
       @opposite_color = "black"
     else
+      session[:color] = "black"
       @colors = "background-color-black color-white"
       @color = "black"
       @background_color = "background-color-black"

@@ -1,5 +1,4 @@
 module ColorsHelper
-
   def set_session_color
     if current_page?(root_path) && session[:color].nil?
       session[:color] = "black"
@@ -9,6 +8,4 @@ module ColorsHelper
       session[:color] = "white"
     end
   end
-
-
 end
