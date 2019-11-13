@@ -8,25 +8,7 @@
 
   <div class="midiquinze-navbar-items d-flex align-items-end height-100px">
     <h6 class="midiquinze-navbar-links font-weight-400 m-0">
-      <% if current_page?(projects_path) %>
-        <%= link_to "WORK", projects_path, class: "desktop-navbar-link display-inline-block hover-border-bottom-#{opposite_color} mx-7px pb-2px text-decoration-none color-#{opposite_color}" %>
-        <%= link_to "STUDIO", about_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px text-decoration-none" %>
-        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px  text-decoration-none" %>
-      <% elsif current_page?(about_path) && params[:from].nil? %>
-        <%= link_to "WORK", projects_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px text-decoration-none" %>
-        <%= link_to "STUDIO", about_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px pb-2px text-decoration-none" %>
-        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px text-decoration-none" %>
-      <% elsif current_page?(about_path) && params[:from] == "contact" %>
-        <%= link_to "WORK", projects_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px text-decoration-none" %>
-        <%= link_to "STUDIO", about_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px opacity-0dot4 pb-2px text-decoration-none" %>
-        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "desktop-navbar-link display-inline-block color-#{opposite_color} hover-border-bottom-#{opposite_color} mx-7px pb-2px text-decoration-none" %>
-      <% elsif current_page?(root_path) %>
-        <span id="project-name"></span><span id="slash" class="ml-16px"></span>
-        <%= link_to "WORK", projects_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} ml-16px mr-7px hover-border-bottom-#{opposite_color} opacity-0dot4 text-decoration-none pb-2px" %>
-        <%= link_to "STUDIO", about_path, class: "desktop-navbar-link display-inline-block color-#{opposite_color} mx-7px hover-border-bottom-#{opposite_color} opacity-0dot4 text-decoration-none pb-2px"  %>
-        <%= link_to "CONTACT", about_path(anchor: "headingThree", from: "contact"), class: "desktop-navbar-link display-inline-block color-#{opposite_color} mx-7px hover-border-bottom-#{opposite_color} opacity-0dot4 text-decoration-none pb-2px" %>
-      <% else %>
-      <% end %>
+      <%= if_current_page_navbar %>
     </h6>
 
     <%= link_to change_color_path, method: :post do %>
