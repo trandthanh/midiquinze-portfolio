@@ -58,10 +58,10 @@ if (document.querySelector(".loader")) {
 
 
 // color();
-// overlay();
+overlay();
 // mobileOverlay();
 
-// glitch();
+glitch();
 
 
 
