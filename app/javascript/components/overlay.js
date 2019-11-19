@@ -6,7 +6,17 @@ const overlay = () => {
     let diapo = slide.dataset.button;
     let overlay = document.querySelector(`#overlay-${project}-${diapo}`);
 
-    overlay.style.width = "32%";
+    function mediaQueries(x) {
+      if (x.matches) { // If media query matches
+        overlay.style.width = "25%";
+      } else {
+        overlay.style.width = "32%";
+      }
+    }
+
+    var x = window.matchMedia("(max-width: 992px)")
+    mediaQueries(x) // Call listener function at run time
+    x.addListener(mediaQueries) // Attach listener function on state changes
   }
 
   /* Close when someone clicks on the "x" symbol inside the overlay */
