@@ -26,13 +26,14 @@ const overlay = () => {
     let closeBtn = document.querySelector(`#closebtn-${project}-${diapo}`);
 
     openBtn.addEventListener('click', (event) => {
+      closeBtn.classList.add("rotation-clockwork45");
       openNav(slide);
     })
 
     closeBtn.addEventListener('click', (event) => {
+      closeBtn.classList.remove("rotation-clockwork45");
       closeNav(slide);
     })
-
   })
 }
 

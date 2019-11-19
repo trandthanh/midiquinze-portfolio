@@ -1,9 +1,9 @@
-<div id="overlay-<%= project.slug %>-cover<%= project_index %>" class="mq-overlay <% if session[:color] == "black" %> <%= "background-color-white" %> <% else %> <%= "background-color-black" %> <% end %> position-absolute" style="height: calc(100vh - 8vh - 18vh);">
+<div id="overlay-<%= project.slug %>-cover<%= project_index %>" class="mq-overlay background-color-<%= opposite_color %> position-absolute" style="height: calc(100vh - 8vh - 18vh);">
   <div class="mq-overlay-content">
 
-    <%= image_tag session[:color] == "black" ? "mq-cross.png" : "mq-cross-white.png", id: "closebtn-#{project.slug}-cover#{project_index}", class: "cursor-pointer height-24px position-absolute right-30px top-8pc" %>
+    <%= image_tag "mq-plus-#{color}.png", id: "closebtn-#{project.slug}-cover#{project_index}", class: "cursor-pointer height-24px position-absolute right-30px top-24px height-24px" %>
 
-    <div class="<% if session[:color] == "black" %> <%= "color-black" %> <% else %> <%= "color-white" %> <% end %> font-weight-300 letter-spacing-1px px-20px py-72px">
+    <div class="color-<%= color %> font-weight-300 letter-spacing-1px px-20px pt-26px">
       <p class="m-0">
         <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
         <div>
@@ -12,7 +12,7 @@
             <br>
           <% end %>
         </div>
-        <div class="mt-50px">
+        <div class="mt-50px line-height-initial">
           <%= project.description %>
         </div>
         <div class="mt-50px">
