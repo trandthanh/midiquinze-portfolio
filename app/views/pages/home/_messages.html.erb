@@ -12,7 +12,7 @@
 
   <% elsif Date.today.month == 7 && Date.today.day == 2 %> <!-- Cléo -->
     <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
-      IT'S <%= Date.today.month %> <%= Date.today.day %>ND,
+      IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>ND,
       <br>
       LEA IS BLOWING
       <br>
@@ -22,7 +22,7 @@
 
   <% elsif Date.today.month == 8 && Date.today.day == 19 %> <!-- Cléo -->
     <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
-      IT'S <%= Date.today.month %> <%= Date.today.day %>TH,
+      IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH,
       <br>
       LAURA IS ENJOYING
       <br>
@@ -32,7 +32,7 @@
 
   <% elsif Date.today.month == 11 && Date.today.day == 19 %> <!-- Cléo -->
     <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
-      IT'S <%= Date.today.month %> <%= Date.today.day %>TH,
+      IT'S <%= Date.today.strftime('%B').upcase %> <%= Date.today.day %>TH,
       <br>
       WE ARE CELEBRATING
       <br>
@@ -68,7 +68,7 @@
 
   <% elsif Date.today.month == 12 && Date.today.day == 25 %> <!-- Christmas -->
     <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
-      IT'S <%= Date.today.month %> <%= Date.today.day %>TH.
+      IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE CLOSED.
       <br>
@@ -77,7 +77,7 @@
 
   <% elsif Date.today.month == 12 && Date.Today.day <= 21 && Date.today.day >= 29 %>
     <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
-      IT'S <%= Date.today.month %> <%= Date.today.day %>TH.
+      IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE SANTACLOSED.
       <br>
