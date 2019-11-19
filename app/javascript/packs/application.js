@@ -21,7 +21,7 @@ if (document.querySelector(".cover0")) {
   mouseDownWhite();
 }
 
-if (document.querySelector("#projects-map")) {
+if (document.querySelector(".projects-map")) {
   mouseMultipleDirectionsBlack();
 }
 

@@ -1,0 +1,60 @@
+.projects-map {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+.horizontal-snap {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.hi {
+    font-family: sans-serif;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: scroll;
+}
+
+section {
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+// h1 {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     text-align: center;
+//     color: white;
+//     width: 100%;
+//     left: 0;
+//     font-size: calc(1rem + 3vw);
+// }
+
+
+// .hi-vertical {
+//   scroll-snap-align: start;
+// }
+
+
+
+
+
+
+
+
+
+
+
+main {
+  height: 100vh;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.vertical-snap {
+  scroll-snap-align: start !important;
+}

@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'pages/contact',  as: :contact
   get 'pages/about', as: :about
 
+  get 'pages/test', as: :test
+
   post 'pages/change_color', as: :change_color
 
   resources :projects, only: [:index]

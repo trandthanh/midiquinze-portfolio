@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :about, :contact, :change_color]
-  before_action :set_color_variables, only: [:home, :about, :contact, :change_color]
+  skip_before_action :authenticate_user!, only: [:home, :about, :contact, :change_color, :test]
+  before_action :set_color_variables, only: [:home, :about, :contact, :change_color, :test]
 
   def home
     loading_session
@@ -27,6 +27,11 @@ class PagesController < ApplicationController
       @colors = "background-color-white color-black"
       redirect_to request.referrer
     end
+  end
+
+  def test
+    @projects = Project.all
+
   end
 
   private
