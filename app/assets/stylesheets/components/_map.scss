@@ -1,12 +1,10 @@
 .projects-map {
-  font-family: sans-serif;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
 }
 
 .horizontal-snap {
-  border-right: 1px solid white;
   height: 100vh;
   scroll-snap-align: center;
 }

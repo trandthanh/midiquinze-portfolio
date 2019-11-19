@@ -66,8 +66,15 @@
   padding-right: 50px;
 }
 
+
 .pr-100px {
   padding-right: 100px;
+}
+
+.pr-100px-last-child {
+  &:last-child {
+    padding-right: 100px;
+  }
 }
 
 .pt-16pc {
