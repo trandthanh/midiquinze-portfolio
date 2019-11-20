@@ -5,7 +5,6 @@ const mouseDownWhite = () => {
     const windowHeight = window.innerHeight;
     const windowWidth = window.innerWidth;
 
-
     if (colorMode == "black") {
       if (event.clientY > (windowHeight / 2)) {
         pageZero.classList.add("cursor-white-down-arrow");

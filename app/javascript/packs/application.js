@@ -5,12 +5,12 @@ import { mouseDownWhite, mouseMultipleDirectionsBlack } from "../components/mous
 import { loader } from "../components/loader";
 import { glitch } from "../components/glitch";
 import { overlay } from "../components/overlay";
+import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
+import { clickScroll } from "../components/clickScroll";
 
 
 import { color } from "../components/color";
-import { clickScroll, firstPageScroll, scrollTo, withoutWheel } from "../components/clickScroll";
 import { debounce } from "../components/debounce";
-import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
 import { scrollVerticalHorizontal } from "../components/scrollVerticalHorizontal";
 import { mobileOverlay } from "../components/mobileOverlay";
 
@@ -31,6 +31,8 @@ if (document.querySelector(".loader")) {
 
 if (document.getElementById("mq-home")) {
   overlay();
+  clickVerticalHorizontal();
+  clickScroll();
 }
 
 glitch();
@@ -53,10 +55,6 @@ glitch();
 //   });
 // }
 
-// if (document.querySelector("#mq-home")) {
-//   clickVerticalHorizontal();
-//   // scrollVerticalHorizontal();
-// }
 
 
 // color();

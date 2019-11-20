@@ -1,7 +1,5 @@
 const clickVerticalHorizontal = () => {
   const slides = document.querySelectorAll(".slide");
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
   const pictureWidth = document.querySelector(".picture-slide").offsetWidth;
   const numberOfProjects = parseInt(document.querySelector("#mq-home").dataset.projectCount, 10);
 
@@ -15,7 +13,7 @@ const clickVerticalHorizontal = () => {
 
   const stopClickPropagation = (element) => {
     element.addEventListener("click", (event) => {
-      event.stopPropagation(); //this is important! If removed, you'll get both alerts
+      event.stopPropagation();
     }, false);
   }
 
@@ -45,16 +43,19 @@ const clickVerticalHorizontal = () => {
 
     const numberOfSlides = parseInt(slide.dataset.panoCount, 10);
 
+    const slideHeight = slide.offsetHeight;
+    const slideWidth = slide.offsetWidth;
+
     // last row cover
     if (slide == document.querySelector(`.cover${numberOfProjects}`)) {
 
       slide.addEventListener('click', (event) => { // click on last row cover
 
-        if (event.clientX < (windowWidth / 3)) { // left on the cover
+        if (event.clientX < (slideWidth / 3)) { // left on the cover
           scrollIntoViewSlide(`.cover${previousNumber}`);
-        } else if (event.clientX > (windowWidth / 3 * 2)) { // right
+        } else if (event.clientX > (slideWidth / 3 * 2)) { // right
           scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
-        } else if (event.clientY < (windowHeight / 2)) { // up
+        } else if (event.clientY < (slideHeight / 2)) { // up
           scrollIntoViewSlide(`.cover${previousNumber}`);
         } else { // down
           scrollIntoViewSlide(".cover1");
@@ -68,7 +69,7 @@ const clickVerticalHorizontal = () => {
 
       slide.addEventListener('click', (event) => {
 
-        if (event.clientX < (windowWidth / 3)) { // left
+        if (event.clientX < (slideWidth / 3)) { // left
 
           if (slide == document.querySelector(`.cover${number}`)) { // left on the cover
             scrollIntoViewSlide(`.cover${previousNumber}`);
@@ -82,13 +83,13 @@ const clickVerticalHorizontal = () => {
           console.log(event.clientX > (pictureWidth / 3 * 2));
 
           if (panoIndex == numberOfSlides) { // last slide on row
-            scrollIntoViewSlide(`.cover${number}`);
+            scrollIntoViewSlide(`.cover${previousNumber}`);
           } else { // other slides
             console.log(document.querySelector(`.pano${nextPanoIndex}-${project}`));
             scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
           }
 
-        } else if (event.clientY < (windowHeight / 2)) { // up
+        } else if (event.clientY < (slideHeight / 2)) { // up
 
           scrollIntoViewSlide(`.cover${previousNumber}`);
 
