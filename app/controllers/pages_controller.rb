@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def about
     @members = Member.all
-    @clients = Client.all
+    @clients = Client.all.order('name ASC')
   end
 
   def contact

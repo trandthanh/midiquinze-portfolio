@@ -13,6 +13,7 @@ import { mobileOverlay } from "../components/mobileOverlay";
 
 if (document.querySelector(".cover0")) {
   mouseDownWhite();
+  clickScroll();
 }
 
 if (document.querySelector(".projects-map")) {
@@ -26,10 +27,9 @@ if (document.querySelector(".loader")) {
 if (document.getElementById("mq-home")) {
   overlay();
   projectName();
+  clickVerticalHorizontal();
 }
 
-clickScroll();
-clickVerticalHorizontal();
 
 glitch();
 

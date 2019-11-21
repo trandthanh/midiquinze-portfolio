@@ -1,3 +1,17 @@
+.hover-color-gold-text-decoration-none {
+  &:hover {
+    color: $gold;
+    text-decoration: none;
+  }
+}
+
+.hover-text-decoration-underline-cursor-pointer {
+  &:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}
+
 .hover-border-bottom-white {
   &:hover {
     color: white;
@@ -40,5 +54,6 @@
   background: white;
   transition: width .3s;
 }
+
 
 
