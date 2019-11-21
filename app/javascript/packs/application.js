@@ -33,9 +33,11 @@ if (document.getElementById("mq-home")) {
 
 glitch();
 
+if (document.querySelector(".midiquinze-navbar-mobile")) {
+  mobileOverlay();
+}
 
 // color();
-// mobileOverlay();
 
 
 
