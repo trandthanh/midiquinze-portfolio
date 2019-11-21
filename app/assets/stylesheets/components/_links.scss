@@ -1,0 +1,75 @@
+.desktop-navbar-link-black::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width .3s;
+}
+
+.desktop-navbar-link-white::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width .3s;
+}
+
+.desktop-footer-link-white::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: white;
+  transition: width .3s;
+}
+
+.desktop-footer-link-black::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: black;
+  transition: width .3s;
+}
+
+.desktop-accordion-link-black::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: black;
+  transition: width .3s;
+}
+
+.desktop-accordion-link-white::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width .3s;
+}
+
+.hover-border-bottom-white {
+  &:hover {
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.hover-border-bottom-black {
+  &:hover {
+    color: black;
+    opacity: 1;
+    cursor: pointer;
+    &:after {
+      width: 100%;
+    }
+  }
+}
