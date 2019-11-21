@@ -6,6 +6,7 @@ import { glitch } from "../components/glitch";
 import { overlay } from "../components/overlay";
 import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
 import { clickScroll } from "../components/clickScroll";
+import { projectName } from "../components/projectName";
 
 import { color } from "../components/color";
 import { mobileOverlay } from "../components/mobileOverlay";
@@ -24,9 +25,11 @@ if (document.querySelector(".loader")) {
 
 if (document.getElementById("mq-home")) {
   overlay();
-  clickVerticalHorizontal();
-  clickScroll();
+  projectName();
 }
+
+clickScroll();
+clickVerticalHorizontal();
 
 glitch();
 

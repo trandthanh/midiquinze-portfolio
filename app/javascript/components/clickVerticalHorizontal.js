@@ -78,14 +78,10 @@ const clickVerticalHorizontal = () => {
           }
 
         } else if (event.clientX > (pictureWidth / 3 * 2)) { // right
-          // console.log(pictureWidth / 3 * 2);
-          // console.log(event.clientX);
-          console.log(event.clientX > (pictureWidth / 3 * 2));
 
           if (panoIndex == numberOfSlides) { // last slide on row
             scrollIntoViewSlide(`.cover${previousNumber}`);
           } else { // other slides
-            console.log(document.querySelector(`.pano${nextPanoIndex}-${project}`));
             scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
           }
 

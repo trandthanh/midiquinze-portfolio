@@ -1,21 +1,20 @@
-
-  <div style="height: calc(100vh - 8vh - 134px);">
-    <div class="row">
-      <% projects.each do |project| %>
-        <div class="midiquinze-card col-md-3 mb-30px">
-          <%= link_to root_path(anchor: "#{project.slug}") do  %>
-              <div class="height-192px <% if session[:color] == "black" %> <%= "background-color-white" %> <% else %> <%= "background-color-black" %> <% end %> d-flex align-items-center justify-content-center">
-                <% if session[:color] == "black" %>
-                  <%= image_tag project.logo_black, class: "height-50pc"%>
-                <% else %>
-                  <%= image_tag project.logo_white, class: "height-50pc"%>
-                <% end %>
-              </div>
-              <%# if session[:color] == "black" %>
-              <div class="overlay-white" style="height: 192px; background-image: url('<%= rails_blob_url(project.thumbnail) %>'); background-position: center; background-size: cover;"></div>
-          <% end %>
-        </div>
-      <% end %>
-    </div>
+<div style="height: calc(100vh - 8vh - 134px);">
+  <div class="row">
+    <% projects.each do |project| %>
+      <div class="midiquinze-card col-md-3 mb-30px">
+        <%= link_to root_path(anchor: "#{project.slug}") do  %>
+            <div class="height-192px <% if session[:color] == "black" %> <%= "background-color-white" %> <% else %> <%= "background-color-black" %> <% end %> d-flex align-items-center justify-content-center">
+              <% if session[:color] == "black" %>
+                <%= image_tag project.logo_black, class: "height-50pc"%>
+              <% else %>
+                <%= image_tag project.logo_white, class: "height-50pc"%>
+              <% end %>
+            </div>
+            <%# if session[:color] == "black" %>
+            <div class="overlay-white" style="height: 192px; background-image: url('<%= rails_blob_url(project.thumbnail) %>'); background-position: center; background-size: cover;"></div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
+</div>
 

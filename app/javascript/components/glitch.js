@@ -6,8 +6,6 @@ const glitch = () => {
 
   logo.addEventListener("mouseenter", (event) => {
     const randomGlitch = glitchesArray[Math.floor(Math.random()*glitchesArray.length)];
-    // console.log(randomGlitch);
-
     logo.classList.add("display-none");
     glitchedLogo.src = randomGlitch;
     glitchedLogo.classList.remove("display-none");
