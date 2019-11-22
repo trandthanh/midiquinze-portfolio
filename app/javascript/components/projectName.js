@@ -15,6 +15,8 @@ const projectName = () => {
 
         if (project !== "") {
           projectName.innerHTML = `${project} <span id="slash" class="ml-16px">/</span>`;
+        } else {
+          projectName.innerText = "";
         }
       }
 

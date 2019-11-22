@@ -32,8 +32,8 @@ const overlay = () => {
   slides.forEach((slide) => {
     let project = slide.dataset.project;
     let diapo = slide.dataset.button;
-    let openBtn = document.querySelector(`#openbtn-${project}-${diapo}`);
-    let closeBtn = document.querySelector(`#closebtn-${project}-${diapo}`);
+    let openBtn = document.querySelector(`#openbtnplus-${project}-${diapo}`);
+    let closeBtn = document.querySelector(`#closebtnplus-${project}-${diapo}`);
 
     openBtn.addEventListener('click', (event) => {
       closeBtn.classList.add("rotation-clockwork45");

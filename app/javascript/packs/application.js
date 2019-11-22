@@ -16,9 +16,6 @@ if (document.querySelector(".cover0")) {
   clickScroll();
 }
 
-if (document.querySelector(".projects-map")) {
-  mouseMultipleDirectionsBlack();
-}
 
 if (document.querySelector(".loader")) {
   loader();
@@ -28,6 +25,7 @@ if (document.getElementById("mq-home")) {
   overlay();
   projectName();
   clickVerticalHorizontal();
+  mouseMultipleDirectionsBlack();
 }
 
 

@@ -28,23 +28,31 @@ const mouseMultipleDirectionsBlack = () => {
     const slideHeight = slide.offsetHeight;
     const slideWidth = slide.offsetWidth;
 
+
     slide.addEventListener('mousemove', (event) => {
+      console.log(slide.offsetHeight);
+      console.log(slide.offsetWidth);
+      console.log(event);
       if (event.clientX < (slideWidth / 3)) {
+        console.log(event.clientX < (slideWidth / 3));
         event.currentTarget.classList.add("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.remove("cursor-black-down-arrow");
         event.currentTarget.classList.remove("cursor-black-up-arrow");
-      } else if (event.clientX > (slideWidth / 3 * 2)) {
-        event.currentTarget.classList.remove("cursor-black-left-arrow");
-        event.currentTarget.classList.add("cursor-black-right-arrow");
-        event.currentTarget.classList.remove("cursor-black-down-arrow");
-        event.currentTarget.classList.remove("cursor-black-up-arrow");
       } else if (event.clientY < (slideHeight / 2)) {
+        console.log(event.clientY < (slideHeight / 2));
         event.currentTarget.classList.remove("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.remove("cursor-black-down-arrow");
         event.currentTarget.classList.add("cursor-black-up-arrow");
+      } else if (event.clientX > (slideWidth / 3 * 2)) {
+        console.log(event.clientX > (slideWidth / 3 * 2));
+        event.currentTarget.classList.remove("cursor-black-left-arrow");
+        event.currentTarget.classList.add("cursor-black-right-arrow");
+        event.currentTarget.classList.remove("cursor-black-down-arrow");
+        event.currentTarget.classList.remove("cursor-black-up-arrow");
       } else {
+        console.log("else");
         event.currentTarget.classList.remove("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.add("cursor-black-down-arrow");
