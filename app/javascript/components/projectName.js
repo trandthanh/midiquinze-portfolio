@@ -1,30 +1,24 @@
 const projectName = () => {
   const slides = document.querySelectorAll(".vertical-snap");
+  const slash = document.querySelector("#slash");
+
   slides.forEach((slide) => {
-    slide.addEventListener('mouseover', (event) => {
+    slide.addEventListener('mouseenter', (event) => {
       const projectName = document.querySelector("#project-name");
-      const slash = document.querySelector("#slash");
 
       projectName.classList.remove('open');
-      slash.classList.remove('open');
 
       const project = event.currentTarget.dataset.projectName;
 
       function addOpen() {
         projectName.classList.add('open');
-        slash.classList.add('open');
 
-        projectName.innerText = `${project}`;
-        if (project === "") {
-          slash.innerText = "";
-        } else {
-          slash.innerText = "/";
+        if (project !== "") {
+          projectName.innerHTML = `${project} <span id="slash" class="ml-16px">/</span>`;
         }
       }
 
-      setTimeout(addOpen, 500);
-
-
+      setTimeout(addOpen, 100);
     })
   })
 }
