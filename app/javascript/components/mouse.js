@@ -25,38 +25,49 @@ const mouseMultipleDirectionsBlack = () => {
   const slides = document.querySelectorAll(".picture-slide");
 
   slides.forEach((slide) => {
-    const slideHeight = slide.offsetHeight;
-    const slideWidth = slide.offsetWidth;
-
+    const slideHeight = window.innerHeight;
+    const slideWidth = window.innerWidth;
 
     slide.addEventListener('mousemove', (event) => {
-      console.log(slide.offsetHeight);
-      console.log(slide.offsetWidth);
-      console.log(event);
-      if (event.clientX < (slideWidth / 3)) {
-        console.log(event.clientX < (slideWidth / 3));
+      const clickZoneTop = slide.querySelector(".openbtn").getBoundingClientRect().top;
+      const clickZoneLeft = slide.querySelector(".openbtn").getBoundingClientRect().left;
+      const clickZoneRight = slide.querySelector(".openbtn").getBoundingClientRect().right;
+      const clickZoneBottom = slide.querySelector(".openbtn").getBoundingClientRect().bottom;
+
+      const slideTop = slide.getBoundingClientRect().top;
+      const slideBottom = slide.getBoundingClientRect().bottom;
+      const slideLeft = slide.getBoundingClientRect().left;
+      const slideRight = slide.getBoundingClientRect().right;
+      const slideDistance = slideBottom - slideTop;
+
+      if ((event.clientX > clickZoneLeft) && (event.clientX < clickZoneRight) && (event.clientY > clickZoneTop) && (event.clientY < clickZoneBottom)) {
+        event.currentTarget.classList.add("cursor-pointer");
+        event.currentTarget.classList.remove("cursor-black-left-arrow");
+        event.currentTarget.classList.remove("cursor-black-right-arrow");
+        event.currentTarget.classList.remove("cursor-black-down-arrow");
+        event.currentTarget.classList.remove("cursor-black-up-arrow");
+      } else if ((event.clientX > slideLeft) && (event.clientX < (slideWidth / 3))) { // left
         event.currentTarget.classList.add("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.remove("cursor-black-down-arrow");
         event.currentTarget.classList.remove("cursor-black-up-arrow");
-      } else if (event.clientY < (slideHeight / 2)) {
-        console.log(event.clientY < (slideHeight / 2));
+      } else if ((event.clientX > (slideWidth / 3)) && (event.clientX < (slideWidth / 3 * 2)) && (event.clientY > slideTop) && (event.clientY < (slideHeight / 2))) { // up
         event.currentTarget.classList.remove("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.remove("cursor-black-down-arrow");
         event.currentTarget.classList.add("cursor-black-up-arrow");
-      } else if (event.clientX > (slideWidth / 3 * 2)) {
-        console.log(event.clientX > (slideWidth / 3 * 2));
+      } else if (event.clientX > (slideWidth / 3 * 2) && (event.clientX < slideRight)) { // right
         event.currentTarget.classList.remove("cursor-black-left-arrow");
         event.currentTarget.classList.add("cursor-black-right-arrow");
         event.currentTarget.classList.remove("cursor-black-down-arrow");
         event.currentTarget.classList.remove("cursor-black-up-arrow");
-      } else {
-        console.log("else");
+      } else if ((event.clientX > slideWidth / 3) && (event.clientX < (slideWidth / 3 * 2) && (event.clientY > (slideHeight / 2)) && (event.clientY < (slideBottom)))) { // down
         event.currentTarget.classList.remove("cursor-black-left-arrow");
         event.currentTarget.classList.remove("cursor-black-right-arrow");
         event.currentTarget.classList.add("cursor-black-down-arrow");
         event.currentTarget.classList.remove("cursor-black-up-arrow");
+      } else {
+        console.log("hi");
       }
     })
   })
