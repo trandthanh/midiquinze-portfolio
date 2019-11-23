@@ -1,8 +1,9 @@
 class Project < ApplicationRecord
   belongs_to :client
-  belongs_to :collaborator, optional: true
   has_many :works
   has_many :jobs, through: :works
+  has_many :collaborations
+  has_many :collaborators, through: :collaborations
 
   has_one_attached :cover
   has_one_attached :logo_black

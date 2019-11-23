@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
 
-  get 'pages/contact',  as: :contact
   get 'pages/about', as: :about
 
   post 'pages/change_color', as: :change_color

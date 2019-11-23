@@ -18,13 +18,16 @@
           <%= project.description %>
         </div>
         <div class="mt-50px">
-          En collaboration avec <%= project.collaborator.name %>
-        </div>
-        <div>
-          Client: <%= project.client.name.upcase %>
-        </div>
-        <div>
-          Crédits photos ©dzedjdao
+          <div>
+            <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.client.name.upcase %>
+          </div>
+          <% unless project.collaborations.empty? %>
+            <% project.collaborators.each do |collaborator| %>
+              <div>
+                <span class="border-bottom-1px-solid-<%= color %> pb-2px"><%= collaborator.role %>:</span> <%= collaborator.name %>
+              </div>
+            <% end %>
+          <% end %>
         </div>
       </p>
     </div>
