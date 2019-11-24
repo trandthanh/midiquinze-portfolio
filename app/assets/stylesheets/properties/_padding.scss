@@ -138,3 +138,20 @@
   padding-top: 80px;
   padding-bottom: 80px;
 }
+
+// FIRST CHILD
+
+.pl-0-except-first-child {
+  &:not(:nth-child(4n+1)) {
+    padding-left: 0px;
+  }
+}
+
+
+.pr-0-except-last-child {
+  &:not(:nth-child(3n)) {
+
+  }
+}
+
+// LAST CHILD
