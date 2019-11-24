@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  after_destroy :purge_photos
+
   belongs_to :client
   has_many :works
   has_many :jobs, through: :works
@@ -16,4 +18,13 @@ class Project < ApplicationRecord
   validates :logo_white, presence: true
   validates :thumbnail, presence: true
   validates :photos, presence: true
+
+
+  private
+
+  def purge_photos
+    self.photos.each do |photo|
+      photo.purge
+    end
+  end
 end
