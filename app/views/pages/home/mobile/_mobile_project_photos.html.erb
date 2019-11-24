@@ -1,0 +1,5 @@
+<% project.mobile_pictures.each_with_index do |project_picture, index| %>
+  <section class="mobile-horizontal-snap">
+    <div class="width-100vw" style="height: 100vh; background-image: url('<%= cl_image_path project_picture.key %>'); background-position: center; background-size: cover;"></div>
+  </section>
+<% end %>

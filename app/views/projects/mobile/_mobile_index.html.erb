@@ -1,16 +1,11 @@
-<% projects.each_with_index do |project, project_index| %>
-  <div id="<%= project.slug %>" class="d-flex">
+<div class="mq-home-mobile-projects-wrapper pt-16vh">
+  <% projects.each_with_index do |project, index| %>
 
-      <div class="width-100vw" style="height: 100vh; background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover; display: inline-block; flex-shrink: 0;"></div>
-
-
-    <% project.photos.each_with_index do |project_photo, index| %>
-
-        <div class="width-100vw" style="height: 100vh; background-image: url('<%= rails_blob_url(project_photo) %>'); background-position: center; background-size: cover; display: inline-block; flex-shrink: 0;">
-        </div>
-
+    <%= link_to projects_path(anchor: "#{project.slug}") do %>
+      <div class="mq-home-mobile-project-cover height-32vh <%= projects.count == (index + 1) ? "" : "mb-16px" %>" style="background-image: url('<%= rails_blob_url(project.cover) %>'); background-position: center; background-size: cover;">
+      </div>
     <% end %>
 
-  </div>
-<% end %>
+  <% end %>
+</div>
 

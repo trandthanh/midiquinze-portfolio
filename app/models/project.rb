@@ -11,7 +11,9 @@ class Project < ApplicationRecord
   has_one_attached :logo_black
   has_one_attached :logo_white
   has_one_attached :thumbnail
+  has_one_attached :mobile_cover
   has_many_attached :photos
+  has_many_attached :mobile_pictures
 
   validates :cover, presence: true
   validates :logo_black, presence: true

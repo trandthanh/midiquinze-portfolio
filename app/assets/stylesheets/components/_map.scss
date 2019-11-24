@@ -13,8 +13,30 @@ main {
   height: 100vh;
   overflow: auto;
   scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: y mandatory; /* Firefox */
+  -ms-scroll-snap-type: y mandatory; /* IE/Edge */
+  -webkit-scroll-snap-type: y mandatory; /* Safari */
+  -webkit-scroll-snap-destination: 0% 0%;
+  -webkit-overflow-scrolling: touch; /* important for iOS */
 }
 
 .vertical-snap {
   scroll-snap-align: start !important;
+}
+
+// MOBILE
+
+.mobile-projects-map {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+
+.mobile-horizontal-snap {
+  scroll-snap-align: center;
+}
+
+.mobile-vertical-snap {
+  scroll-snap-align: center !important;
 }
