@@ -3,7 +3,9 @@ class PagesController < ApplicationController
   before_action :set_color_variables, only: [:home, :about, :contact, :change_color, :test]
 
   def home
-    loading_session
+    # loading_session
+
+    reset_session
 
     @projects = Project.all
   end

@@ -46,15 +46,16 @@ const clickVerticalHorizontal = () => {
     const slideHeight = window.innerHeight;
     const slideWidth = window.innerWidth;
 
-    const slideTop = slide.getBoundingClientRect().top;
-    const slideBottom = slide.getBoundingClientRect().bottom;
-    const slideLeft = slide.getBoundingClientRect().left;
-    const slideRight = slide.getBoundingClientRect().right;
+
 
     // last row cover
     if (slide == document.querySelector(`.cover${numberOfProjects}`)) {
 
       slide.addEventListener('click', (event) => { // click on last row cover
+        const slideTop = event.currentTarget.getBoundingClientRect().top;
+        const slideBottom = event.currentTarget.getBoundingClientRect().bottom;
+        const slideLeft = event.currentTarget.getBoundingClientRect().left;
+        const slideRight = event.currentTarget.getBoundingClientRect().right;
 
         if ((event.clientX > slideLeft) && (event.clientX < (slideWidth / 3))) { // left on the cover
           scrollIntoViewSlide(`.cover${previousNumber}`);
@@ -73,8 +74,14 @@ const clickVerticalHorizontal = () => {
     } else { // other slides
 
       slide.addEventListener('click', (event) => {
+        const slideTop = event.currentTarget.getBoundingClientRect().top;
+        const slideBottom = event.currentTarget.getBoundingClientRect().bottom;
+        const slideLeft = event.currentTarget.getBoundingClientRect().left;
+        const slideRight = event.currentTarget.getBoundingClientRect().right;
 
         if ((event.clientX > slideLeft) && (event.clientX < (slideWidth / 3))) { // left
+
+          console.log("left");
 
           if (slide == document.querySelector(`.cover${number}`)) { // left on the cover
             scrollIntoViewSlide(`.cover${previousNumber}`);
@@ -83,25 +90,32 @@ const clickVerticalHorizontal = () => {
           }
 
         } else if (event.clientX > (slideWidth / 3 * 2) && (event.clientX < slideRight)) { // right
+          console.log(event);
+          console.log(event.clientX > (slideWidth / 3 * 2) && (event.clientX < slideRight));
 
           if (panoIndex == numberOfSlides) { // last slide on row
             scrollIntoViewSlide(`.cover${previousNumber}`);
           } else { // other slides
+            console.log(document.querySelector(`.pano${nextPanoIndex}-${project}`));
             scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
           }
 
         } else if ((event.clientX > (slideWidth / 3)) && (event.clientX < (slideWidth / 3 * 2)) && (event.clientY > slideTop) && (event.clientY < (slideHeight / 2))) { // up
 
+          console.log("up");
+
           scrollIntoViewSlide(`.cover${previousNumber}`);
 
-        } else { // down
+        } else if ((event.clientX > slideWidth / 3) && (event.clientX < (slideWidth / 3 * 2) && (event.clientY > (slideHeight / 2)) && (event.clientY < (slideBottom)))) {
+
+          console.log("down");
 
           if (number == numberOfProjects) { // last row slides except last row cover
             scrollIntoViewSlide(".cover1");
           } else { // other slides
             scrollIntoViewSlide(`.cover${nextNumber}`);
           }
-
+        } else {
         } // if
 
       }) // eventListener

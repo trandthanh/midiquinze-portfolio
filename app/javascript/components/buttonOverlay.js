@@ -6,7 +6,6 @@ const buttonOverlay = () => {
     slide.addEventListener('mouseover', (event) => {
       button.classList.add('animated', 'bounceIn')
       button.style.display = "block";
-      console.log(event);
     })
 
     slide.addEventListener('mouseout', (event) => {

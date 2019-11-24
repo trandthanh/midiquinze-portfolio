@@ -67,7 +67,6 @@ const mouseMultipleDirectionsBlack = () => {
         event.currentTarget.classList.add("cursor-black-down-arrow");
         event.currentTarget.classList.remove("cursor-black-up-arrow");
       } else {
-        console.log("hi");
       }
     })
   })
