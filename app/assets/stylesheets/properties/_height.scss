@@ -103,15 +103,11 @@
   height: 100vh;
 }
 
-.height-108vh {
-  height: 108vh;
-}
-
 .height-max-content {
   height: max-content;
 }
 
-// USED
+// px
 
 .height-45px {
   height: 45px;
@@ -125,9 +121,18 @@
   height: 89px;
 }
 
-// EM
+// em
+
+.height-1dot3em {
+  height: 1.3em;
+}
 
 .height-10em {
   height: 10em;
 }
 
+// vh
+
+.height-108vh {
+  height: 108vh;
+}
