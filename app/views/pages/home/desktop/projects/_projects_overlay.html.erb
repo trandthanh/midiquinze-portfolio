@@ -1,7 +1,7 @@
 <div id="overlay-<%= project.slug %>-cover<%= project_index %>" class="mq-overlay background-color-<%= opposite_color %> position-absolute" style="height: calc(100vh - 8vh - 18vh);">
   <div class="mq-overlay-content">
 
-    <span id="closebtn-<%= project.slug %>-cover<%= project_index %>" class="closebtn height-45px width-45px cursor-pointer position-absolute right-30px top-24px d-flex justify-content-center align-items-center">
+    <span id="closebtn-<%= project.slug %>-cover<%= project_index %>" class="closebtn height-100px width-100px cursor-pointer position-absolute right-30px top-24px d-flex justify-content-end align-items-start">
       <%= image_tag "mq-plus-#{color}.png", id: "closebtnplus-#{project.slug}-cover#{project_index}", class: "cursor-pointer height-24px" %>
     </span>
 

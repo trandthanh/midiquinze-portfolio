@@ -3,9 +3,7 @@ class PagesController < ApplicationController
   before_action :set_color_variables, only: [:home, :about, :contact, :change_color, :test]
 
   def home
-    # loading_session
-
-    reset_session
+    loading_session
 
     @projects = Project.all
   end
@@ -41,7 +39,7 @@ class PagesController < ApplicationController
 
   def loading_session
     if session.key?(:visited_before)
-      session[:clear_time] = Time.parse(session[:time]) + 1 * 60
+      session[:clear_time] = Time.parse(session[:time]) + 10 * 60
       reset_session if session[:clear_time] <= Time.now
     else
       session[:visited_before] = true
