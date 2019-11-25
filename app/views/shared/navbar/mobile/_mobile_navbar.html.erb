@@ -4,7 +4,7 @@
     <%#= image_tag session[:color] == "black" ? "mq_logo_#{white}.png" : "mq_logonoir.png", class: "height-8vh width-56vw" %>
   <% end %>
 
-  <%= image_tag "mq_burger_#{opposite_color}", id: "burger-openbtn", class: "height-1dot3em" %>
+  <%= image_tag "mq_burger_#{opposite_color}.png", id: "burger-openbtn", class: "height-1dot3em" %>
 
   <%= render partial: 'shared/navbar/mobile/mobile_navbar/mobile_navbar_overlay', locals: { color: @color, opposite_color: @opposite_color } %>
 </div>
