@@ -1,0 +1,78 @@
+@include media-breakpoint-only(xs) {
+}
+
+@include media-breakpoint-only(sm) {
+  .midiquinze-footer {
+    display: none !important;
+  }
+
+  #midiquinze-gif-loader {
+    display: none;
+  }
+
+  .midiquinze-navbar {
+    display: none !important;
+  }
+
+  .midiquinze-navbar-mobile {
+    display: none !important;
+  }
+
+  #mq-home {
+    display: none;
+  }
+
+  #mq-home-mobile {
+    display: none;
+  }
+
+  #mobile-about {
+    display: none;
+  }
+
+  #mq-mobile-footer {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .midiquinze-footer {
+    display: none !important;
+  }
+
+  #midiquinze-gif-loader {
+    display: none;
+  }
+
+  .midiquinze-navbar {
+    display: none !important;
+  }
+
+  .midiquinze-navbar-mobile {
+    display: none !important;
+  }
+
+  #mq-home {
+    display: none;
+  }
+
+  #mq-home-mobile {
+    display: none;
+  }
+
+  #mobile-about {
+    display: none;
+  }
+
+  #mq-mobile-footer {
+    display: none !important;
+  }
+}
+
+@include media-breakpoint-only(lg) {
+}
+
+@include media-breakpoint-only(xl) {
+}
+
+
