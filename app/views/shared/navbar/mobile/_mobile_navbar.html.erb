@@ -1,4 +1,4 @@
-<div class="midiquinze-navbar-mobile d-flex align-items-end justify-content-around height-8vh position-fixed width-100vw z-index-100">
+<div class="midiquinze-navbar-mobile d-flex align-items-end justify-content-around position-fixed pb-8vh width-100vw z-index-100 <%= current_page?(about_path) ? "background-color-#{color}" : "" %>">
   <%= link_to root_path, class: "" do %>
     <%= image_tag "mq_logo_#{opposite_color}.png", class: "height-8vh width-56vw" %>
     <%#= image_tag session[:color] == "black" ? "mq_logo_#{white}.png" : "mq_logonoir.png", class: "height-8vh width-56vw" %>

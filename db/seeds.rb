@@ -14,3 +14,4 @@ gwendoline = Member.create(name: "GWENDOLINE RAVET", role: "CLIENT DIRECTOR")
 laura = Member.create(name: "LAURA JOVELIN", role: "ART DIRECTOR JR")
 léa = Member.create(name: "LÉA RETAILLEAU", role: "ASSISTANT ART DIRECTOR")
 puts "Done creating team members!"
+
