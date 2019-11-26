@@ -5,7 +5,7 @@
   &:hover {
     border: 2px solid #fff;
     background-color: black;
-    cursor: asset-url("small-white-arrow.png") 7 0, pointer !important;
+    // cursor: asset-url("small-white-arrow.png") 7 0, pointer !important;
   }
 }
 
@@ -16,7 +16,8 @@
   &:hover {
     border: 2px solid black;
     background-color: white;
-    cursor: asset-url("small-black-arrow.png") 7 0, pointer !important;
+    cursor: asset-url("mq_black_arrow_up.png"), default;
+    // cursor: asset-url("small-black-arrow.png") 7 0, pointer !important;
   }
 }
 
