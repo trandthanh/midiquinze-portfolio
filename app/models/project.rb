@@ -15,13 +15,6 @@ class Project < ApplicationRecord
   has_many_attached :photos
   has_many_attached :mobile_pictures
 
-  validates :cover, presence: true
-  validates :logo_black, presence: true
-  validates :logo_white, presence: true
-  validates :thumbnail, presence: true
-  validates :photos, presence: true
-
-
   private
 
   def purge_photos

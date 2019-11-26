@@ -8,9 +8,9 @@ const overlay = () => {
 
     function mediaQueries(x) {
       if (x.matches) { // If media query matches
-        overlay.style.width = "25%";
+        overlay.style.width = "26%";
       } else {
-        overlay.style.width = "32%";
+        overlay.style.width = "26%";
       }
     }
 

@@ -5,8 +5,8 @@
       <%= image_tag "mq-plus-#{color}.png", id: "closebtnplus-#{project.slug}-cover#{project_index}", class: "cursor-pointer height-24px" %>
     </span>
 
-    <div class="color-<%= color %> font-weight-300 letter-spacing-1px px-20px pt-26px">
-      <p class="m-0">
+    <div class="color-<%= color %> font-weight-300 letter-spacing-1px pl-2em pr-4em pt-26px">
+      <p class="m-0 letter-spacing-0dot8px">
         <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
         <div>
           <% project.works.each do |project_work| %>
@@ -14,7 +14,7 @@
             <br>
           <% end %>
         </div>
-        <div class="mt-50px line-height-initial">
+        <div class="font-size-14px mt-50px line-height-initial">
           <%= project.description %>
         </div>
         <div class="mt-50px">

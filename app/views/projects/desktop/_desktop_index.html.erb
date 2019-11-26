@@ -1,13 +1,17 @@
-<div class="" style="height: calc(100vh - 8vh - 134px);">
+<div style="height: calc(100vh - 8vh);">
   <div class="row">
     <% projects.each do |project| %>
       <div class="midiquinze-card col-md-3 pl-0-except-first-child pr-0-except-last-child mb-1em">
         <%= link_to root_path(anchor: "#{project.slug}") do  %>
-            <div class="height-10em background-color-<%= opposite_color %> d-flex align-items-center justify-content-center overflow-hidden">
-              <%= cl_image_tag project.logo_black.key, class: "height-10em" %>
+            <div class="height-12em background-color-<%= opposite_color %> d-flex align-items-center justify-content-center overflow-hidden">
+              <% if @color == "white" %>
+                <%= cl_image_tag project.logo_white.key, class: "height-12em" %>
+              <% else %>
+                <%= cl_image_tag project.logo_black.key, class: "height-12em" %>
+              <% end %>
             </div>
 
-            <div class="overlay-white" style="height: 10em; background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;"></div>
+            <div class="overlay-white" style="height: 12em; background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;"></div>
         <% end %>
       </div>
     <% end %>
