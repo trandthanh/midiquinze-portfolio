@@ -4,7 +4,7 @@ const buttonOverlay = () => {
     const button = slide.querySelector(".openbtn");
 
     slide.addEventListener('mouseover', (event) => {
-      button.classList.add('animated', 'bounceIn')
+      // button.classList.add('animated', 'bounceIn')
       button.style.display = "block";
     })
 

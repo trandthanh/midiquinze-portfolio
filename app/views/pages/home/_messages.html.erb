@@ -1,7 +1,7 @@
-<div class="mq-home-messages d-flex flex-column height-100pc justify-content-center pt-18vh">
+<div class="mq-home-messages d-flex flex-column justify-content-center pt-18vh" style="height: calc(100vh - 8vh);">
 
   <% if Time.now.hour == 12 && Time.now.min == 15 %> <!-- 12:15 -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       BONJOUR!
       <br>
       WE ARE <%= Time.now.hour %>:<%= Time.now.min %>, A FRENCH
@@ -11,7 +11,7 @@
     <h4 class="letter-spacing-1px">(SORRY, WE DON'T SERVE FOOD)</h4>
 
   <% elsif Date.today.month == 7 && Date.today.day == 2 %> <!-- Cléo -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>ND,
       <br>
       LEA IS BLOWING
@@ -21,7 +21,7 @@
     <h4 class="letter-spacing-1px">(HAPPY BIRTHDAY!)</h4>
 
   <% elsif Date.today.month == 8 && Date.today.day == 19 %> <!-- Cléo -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH,
       <br>
       LAURA IS ENJOYING
@@ -31,7 +31,7 @@
     <h4 class="letter-spacing-1px">(HAPPY BIRTHDAY!)</h4>
 
   <% elsif Date.today.month == 11 && Date.today.day == 19 %> <!-- Cléo -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date.today.strftime('%B').upcase %> <%= Date.today.day %>TH,
       <br>
       WE ARE CELEBRATING
@@ -41,7 +41,7 @@
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
 
   <% elsif Date.today.month == 12 && Date.today.day == 12 %> <!-- Romain -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH,
       <br>
       WE ARE CELEBRATING
@@ -51,7 +51,7 @@
     <h4 class="letter-spacing-1px">(ALL DAY LONG)</h4>
 
   <% elsif Date.today.month == 12 && Date.today.day == 15 %> <!-- Jerémie -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH,
       <br>
       JEREMIE IS EATING A SPECIAL CAKE
@@ -59,7 +59,7 @@
     <h4 class="letter-spacing-1px">(HAPPY BIRTHDAY!)</h4>
 
   <% elsif Date.today.month == 4 && Date.today.day == 1 %> <!-- April's Fool -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S APRIL FOOL'S DAY,
       <br>
       A FULL DAY OF JOKES!
@@ -67,7 +67,7 @@
     <h4 class="letter-spacing-1px">(WE LOVE THAT)</h4>
 
   <% elsif Date.today.month == 12 && Date.today.day == 25 %> <!-- Christmas -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE CLOSED.
@@ -76,7 +76,7 @@
     <h4 class="letter-spacing-1px">(MERRY CHRISTMAS)</h4>
 
   <% elsif Date.today.month == 12 && Date.Today.day <= 21 && Date.today.day >= 29 %>
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       IT'S <%= Date::MONTHNAMES[Date.today.month].upcase %> <%= Date.today.day %>TH.
       <br>
       WE ARE SANTACLOSED.
@@ -86,7 +86,7 @@
 
 
   <% elsif (Time.now.hour <= 9 || Time.now.hour >= 19) %> <!-- closed -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       <% if Time.now.min < 10 %>
         IL EST <%= Time.now.hour %>:0<%= Time.now.min %>.
       <% elsif Time.now.min < 10 && Time.now.hour %>
@@ -104,7 +104,7 @@
     <h4 class="letter-spacing-1px">(FRENCH JOKE<%#= image_tag "#{opposite_color}-smiley.png", class: "height-20px mb-5px" %>)</h4>
 
   <% elsif (Time.now.hour == 13) %> <!-- lunch -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       <% if Time.now.min < 10 %>
         <%= Time.now.hour %>:0<%= Time.now.min %> IT'S TIME TO LUNCH
       <% else %>
@@ -115,7 +115,7 @@
     </h1>
 
   <% else %> <!-- open -->
-    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9 mt-neg3pc">
+    <h1 class="font-family-DINpro font-size-11vh line-height-0dot9">
       <% if (Time.now.min < 10) %>
         IL EST <%= Time.now.hour %>:0<%= Time.now.min %>
       <% else %>

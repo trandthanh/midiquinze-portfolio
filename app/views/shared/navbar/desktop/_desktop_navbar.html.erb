@@ -1,4 +1,4 @@
-<div class="midiquinze-navbar <%= background_color unless current_page?(root_path) %> d-flex height-18vh justify-content-between letter-spacing-1px mt-neg1px position-fixed pb-3pc px-100px width-100pc z-index-1000">
+<div class="midiquinze-navbar <%= background_color unless current_page?(root_path) %> d-flex height-16vh justify-content-between letter-spacing-1px mt-neg1px position-fixed pb-3pc px-100px width-100pc z-index-1000">
 
   <%= link_to root_path, class: "width-371px" do %>
     <%= image_tag "mq_logo_#{opposite_color}.png", id: "mq-glitch-logo", class: "display-none height-149px ml-neg15dot7pc mt-neg6pc z-index-neg100", data: { gif5: asset_url("mq_glitch_5_#{color}.gif"), gif6: asset_url("mq_glitch_6_#{color}.gif") }%>
@@ -12,7 +12,7 @@
     </h6>
 
     <%= link_to change_color_path, method: :post do %>
-      <div class="color-button color-button-<%= opposite_color %> height-13px width-13px border-radius-50pc mb-8px ml-7px mr-7px"></div>
+      <div class="color-button color-button-<%= opposite_color %> height-13px width-13px border-radius-50pc mb-6px ml-7px mr-7px"></div>
     <% end %>
   </div>
 </div>

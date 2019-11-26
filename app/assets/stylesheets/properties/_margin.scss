@@ -146,10 +146,14 @@
   margin-bottom: 36vh !important;
 }
 
-// USED
+// %
 
 .ml-neg15dot7pc {
   margin-left: -15.7%;
+}
+
+.mt-neg8pc {
+  margin-top: -8%;
 }
 
 .mt-neg6pc {
@@ -166,9 +170,14 @@
   margin-top: -6em;
 }
 
-// pc
+// px
 
-.mt-neg8pc {
-  margin-top: -8%;
+.mb-6px {
+  margin-bottom: 6px;
 }
 
+// vh
+
+.mt-16vh {
+  margin-top: 16vh;
+}

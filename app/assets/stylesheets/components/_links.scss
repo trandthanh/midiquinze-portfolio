@@ -1,3 +1,7 @@
+.desktop-navbar-link-black {
+  position: relative;
+}
+
 .desktop-navbar-link-black::after {
   content: '';
   display: block;
@@ -5,6 +9,13 @@
   height: 1px;
   background: black;
   transition: width .3s;
+
+  position: absolute;
+  top: 20px;
+}
+
+.desktop-navbar-link-white {
+  position: relative;
 }
 
 .desktop-navbar-link-white::after {
@@ -14,6 +25,9 @@
   height: 1px;
   background: white;
   transition: width .3s;
+
+  position: absolute;
+  top: 20px;
 }
 
 .desktop-footer-link-white::after {

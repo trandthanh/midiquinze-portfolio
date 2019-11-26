@@ -1,9 +1,9 @@
 import "bootstrap";
-import "animate.css";
+// import "animate.css";
 
 import { mouseDownWhite, mouseMultipleDirectionsBlack } from "../components/mouse";
 import { loader } from "../components/loader";
-import { glitch } from "../components/glitch";
+// import { glitch } from "../components/glitch";
 import { overlay } from "../components/overlay";
 import { clickVerticalHorizontal } from "../components/clickVerticalHorizontal";
 import { clickScroll } from "../components/clickScroll";
@@ -28,7 +28,7 @@ if (document.getElementById("mq-home")) {
   mouseMultipleDirectionsBlack();
 }
 
-glitch();
+// glitch();
 
 if (document.querySelector(".midiquinze-navbar-mobile")) {
   mobileOverlay();

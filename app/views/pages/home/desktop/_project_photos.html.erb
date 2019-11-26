@@ -1,6 +1,6 @@
 <% project.photos.each_with_index do |project_photo, index| %>
-  <section class="horizontal-snap slide pano<%= index + 1 %>-<%= project.slug %> height-100vh pb-8vh ml-50px pt-18vh pr-100px-last-child" data-button="pano<%= index %>" data-project="<%= project.slug %>" data-number="<%= project_index + 1 %>" data-pano-index="<%= index + 1%>" data-pano-count="<%= project.photos.count %>" data-project-name="<%= project.client.name %>">
-    <div class="picture-slide position-relative width-100vwminus200px" style="height: calc(100vh - 8vh - 18vh); background-image: url('<%= cl_image_path project_photo.key %>'); background-position: center; background-size: cover;">
+  <section class="horizontal-snap slide pano<%= index + 1 %>-<%= project.slug %> height-100vh pb-8vh ml-50px pt-16vh pr-100px-last-child" data-button="pano<%= index %>" data-project="<%= project.slug %>" data-number="<%= project_index + 1 %>" data-pano-index="<%= index + 1%>" data-pano-count="<%= project.photos.count %>" data-project-name="<%= project.client.name %>">
+    <div class="picture-slide position-relative width-100vwminus200px" style="height: calc(100vh - 24vh); background-image: url('<%= cl_image_path project_photo.key %>'); background-position: center; background-size: cover;">
 
       <span id="openbtn-<%= project.slug %>-pano<%= index %>" class="openbtn height-100px width-100px cursor-pointer position-absolute right-30px top-24px d-flex justify-content-end align-items-start">
         <%= image_tag "mq-plus.png", id: "openbtnplus-#{project.slug}-pano#{index}", class: "cursor-pointer height-24px" %>
