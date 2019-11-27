@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     loading_session
 
-    @projects = Project.all
+    @projects = Project.select { |project| project.cover.attached? }
   end
 
   def about

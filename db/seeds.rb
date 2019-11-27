@@ -15,10 +15,11 @@
 # léa = Member.create(name: "LÉA RETAILLEAU", role: "ASSISTANT ART DIRECTOR")
 # puts "Done creating team members!"
 
-puts "Creating clients..."
-# didn't include those with links
+puts "Creating clients ..."
 
-clients_without_links = ["Alain Édouard",
+clients = [
+"27 rosiers",
+"Alain Édouard",
 "Brainsonic",
 "Bros Stories",
 "Canard & cie",
@@ -35,14 +36,17 @@ clients_without_links = ["Alain Édouard",
 "Givenchy",
 "Horus Travaux",
 "Joone",
+"Kaki",
 "Louis Pion",
 "Maison de famille",
 "Maison nouvelle",
 "Maison Marine",
 "Maurice Garage",
+"Nike",
 "Nooz optics",
 "Opus Paris",
 "Paris Saint-Germain",
+"Premier Amour",
 "Si la mer monte",
 "Sous les fraises",
 "Slate",
@@ -50,8 +54,30 @@ clients_without_links = ["Alain Édouard",
 "VBS",
 "Vice"]
 
-clients_without_links.each do |client|
+clients.each do |client|
   Client.create(name: client)
 end
 
 puts "Done creating clients!"
+
+puts "Creating projects (vignettes)..."
+
+projects = [
+"Just Do It",
+"On the beach",
+"wwc",
+"Les belles rives",
+"27 rosiers",
+"Cabourg mon amour"
+]
+
+projects.each do |project|
+  Project.create(title: project,
+    description: "Lorem Ipsum est un texte d'espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les mises en page et les maquettes visuelles.",
+    time: "03:14",
+    slug: project.downcase.split.join("-"))
+end
+
+puts "Done creating projects (vignettes)!"
+
+

@@ -1,6 +1,6 @@
 <div style="height: calc(100vh - 8vh);">
   <div class="row">
-    <% projects.each do |project| %>
+    <% projects.each_with_index do |project, index| %>
       <div class="midiquinze-card col-md-3 pl-0-except-first-child pr-0-except-last-child mb-1em">
         <%= link_to root_path(anchor: "#{project.slug}") do  %>
             <div class="height-12em background-color-<%= opposite_color %> d-flex align-items-center justify-content-center overflow-hidden">
@@ -11,7 +11,7 @@
               <% end %>
             </div>
 
-            <div class="overlay-white" style="height: 12em; background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;"></div>
+            <div class="overlay-white <%= (index % 4 == 0) ? "width-thumbnail-first-child" : "width-thumbnail-except-first-child" %>" style="height: 12em; background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;"></div>
         <% end %>
       </div>
     <% end %>

@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
   after_destroy :purge_photos
 
-  belongs_to :client
+  belongs_to :client, optional: true
   has_many :works
   has_many :jobs, through: :works
   has_many :collaborations

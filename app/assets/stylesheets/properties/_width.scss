@@ -98,3 +98,19 @@
 .width-29vw {
   width: 29vw;
 }
+
+
+// special
+
+.width-thumbnail-first-child {
+  width: calc(100% - 30px);
+}
+
+.width-thumbnail-except-first-child {
+
+
+  &:not(:nth-child(4n+1)) {
+    width: calc(100% - 15px);
+  }
+}
+
