@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'about', to: "pages#about", as: :about
 
+
   post 'pages/change_color', as: :change_color
 
   resources :projects, only: [:index]

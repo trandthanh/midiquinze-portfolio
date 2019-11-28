@@ -3,10 +3,10 @@ class PagesController < ApplicationController
   before_action :set_color_variables, only: [:home, :about, :contact, :change_color, :test]
 
   def home
-    loading_session
-
+    # session.delete(:visited_before)
     @projects = Project.select { |project| project.cover.attached? }
   end
+
 
   def about
     @members = Member.all
@@ -14,7 +14,6 @@ class PagesController < ApplicationController
   end
 
   def contact
-
   end
 
   def change_color

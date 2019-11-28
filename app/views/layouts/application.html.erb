@@ -17,6 +17,7 @@
     <%#= render 'shared/flashes' %>
     <% if current_page?(root_path) && session[:visited_before].nil? %>
       <%= render partial: 'shared/loader/loader', locals: { background_color: @background_color } %>
+      <% session[:visited_before] = true %>
     <% end %>
 
     <div id="midiquinze-main" class="<%= (current_page?(root_path) && session[:visited_before].nil?) ? 'display-none' : '' %>">

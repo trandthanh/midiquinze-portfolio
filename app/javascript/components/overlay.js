@@ -44,7 +44,17 @@ const overlay = () => {
       closeBtn.classList.remove("rotation-clockwork45");
       closeNav(slide);
     })
+
+    slide.addEventListener("mouseover", (event) => {
+      slides.forEach((slide) => {
+        if (slide !== event.currentTarget) {
+          closeNav(slide);
+        }
+      })
+    })
   })
 }
 
 export { overlay }
+
+
