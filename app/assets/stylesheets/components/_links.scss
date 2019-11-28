@@ -7,11 +7,11 @@
   display: block;
   width: 0;
   height: 1px;
-  background: black;
+  background: $gold;
   transition: width .3s;
 
   position: absolute;
-  top: 20px;
+  top: 25px;
 }
 
 .desktop-navbar-link-white {
@@ -23,11 +23,11 @@
   display: block;
   width: 0;
   height: 1px;
-  background: white;
+  background: $gold;
   transition: width .3s;
 
   position: absolute;
-  top: 20px;
+  top: 25px;
 }
 
 .desktop-footer-link-white::after {
@@ -80,6 +80,17 @@
 .hover-border-bottom-black {
   &:hover {
     color: black;
+    opacity: 1;
+    cursor: pointer;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+.hover-border-bottom-gold {
+  &:hover {
+    color: $gold;
     opacity: 1;
     cursor: pointer;
     &:after {
