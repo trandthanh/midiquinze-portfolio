@@ -42,7 +42,14 @@ const overlay = () => {
 
     closeBtn.addEventListener('click', (event) => {
       closeBtn.classList.remove("rotation-clockwork45");
+      closeBtn.classList.add("rotation-counterclockwork45");
       closeNav(slide);
+
+      const removeClasses = () => {
+        closeBtn.classList.remove("rotation-counterclockwork45");
+      }
+
+      setTimeout(removeClasses, 1000);
     })
 
     slide.addEventListener("mouseover", (event) => {
