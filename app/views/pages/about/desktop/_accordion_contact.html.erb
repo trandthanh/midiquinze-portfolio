@@ -1,41 +1,41 @@
-<div id="collapseThree" class="collapse <%= "show" if params[:from] == "contact" %> " aria-labelledby="headingThree" data-parent="#about-accordion">
-  <div class="mb-24px">
+<div id="collapseThree" class="collapse <%= "show" if params[:from] == "contact" %>" aria-labelledby="headingThree" data-parent="#about-accordion">
+  <div class="mb-24px mt-2em">
     <div class="d-flex">
-      <div class="contact-category d-flex width-24pc justify-content-between">
-        <p class="font-weight-600 letter-spacing-1px height-max-content">ADDRESS</p>
+      <div class="contact-category d-flex width-30pc justify-content-between">
+        <p class="font-weight-200 letter-spacing-1px height-max-content">ADDRESS</p>
         <p>:</p>
       </div>
 
       <div class="contact-info pl-20px">
         <%= link_to "https://www.google.fr/maps/place/Midi+Quinze/@48.869407,2.349129,14.6z/data=!4m5!3m4!1s0x47e66e110bcfffff:0x96001c6d78485f62!8m2!3d48.8696076!4d2.3537801", class: "hover-color-gold-text-decoration-none color-#{opposite_color}" do %>
-          <p class="letter-spacing-1px m-0">33 RUE DES PETITES ÉCURIES<br>75010 PARIS — FRANCE</p>
+          <p class="font-weight-200 letter-spacing-1px m-0">33 RUE DES PETITES ÉCURIES<br>75010 PARIS — FRANCE</p>
         <% end %>
       </div>
     </div>
 
     <div class="d-flex">
-      <div class="contact-category d-flex width-24pc justify-content-between">
-        <p class="font-weight-600 letter-spacing-1px height-max-content m-0">MAIL</p>
+      <div class="contact-category d-flex width-30pc justify-content-between">
+        <p class="font-weight-200 letter-spacing-1px height-max-content m-0">MAIL</p>
         <p class="m-0">:</p>
       </div>
 
       <div class="contact-info pl-20px">
-        <p class="letter-spacing-1px m-0"><%= mail_to "HELLO@MIDIQUINZE.COM", "HELLO@MIDIQUINZE.COM", class: "hover-color-gold-text-decoration-none color-#{opposite_color}" %></p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= mail_to "HELLO@MIDIQUINZE.COM", "HELLO@MIDIQUINZE.COM", class: "hover-color-gold-text-decoration-none color-#{opposite_color}" %></p>
       </div>
     </div>
 
     <div class="d-flex">
-      <div class="contact-category d-flex width-24pc justify-content-between">
-        <p class="font-weight-600 letter-spacing-1px height-max-content m-0">ON AIR</p>
+      <div class="contact-category d-flex width-30pc justify-content-between">
+        <p class="font-weight-200 letter-spacing-1px height-max-content m-0">ON AIR</p>
         <p class="m-0">:</p>
       </div>
 
       <div class="contact-info pl-20px">
-        <p class="letter-spacing-1px m-0"><%= link_to "INSTAGRAM", "https://www.instagram.com/midi.quinze/", target: "_blank", class: "hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
-        <p class="letter-spacing-1px m-0"><%= link_to "BEHANCE", "https://www.behance.net/midiquinze", target: "_blank", class: "hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
-        <p class="letter-spacing-1px m-0"><%= link_to "FACEBOOK", "https://www.facebook.com/midiquinzeparis/", target: "_blank", class: "hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
-        <p class="letter-spacing-1px m-0"><%= link_to "LINKEDIN", "https://www.linkedin.com/company/midi-quinze/", target: "_blank", class: "hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
-        <p class="letter-spacing-1px m-0"><%= link_to "MINITEL", "https://fr.wikipedia.org/wiki/Minitel", target: "_blank", class: "hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= link_to "INSTAGRAM", "https://www.instagram.com/midi.quinze/", target: "_blank", class: "font-weight-200 hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= link_to "BEHANCE", "https://www.behance.net/midiquinze", target: "_blank", class: "font-weight-200 hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= link_to "FACEBOOK", "https://www.facebook.com/midiquinzeparis/", target: "_blank", class: "font-weight-200 hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= link_to "LINKEDIN", "https://www.linkedin.com/company/midi-quinze/", target: "_blank", class: "font-weight-200 hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
+        <p class="font-weight-200 letter-spacing-1px m-0"><%= link_to "MINITEL", "https://fr.wikipedia.org/wiki/Minitel", target: "_blank", class: "font-weight-200 hover-color-gold-text-decoration-none text-decoration-none color-#{opposite_color}" %> </p>
       </div>
       </div>
     </div>

@@ -52,9 +52,17 @@
   content: '';
   display: block;
   width: 0;
-  height: 2px;
-  background: black;
+  height: 0.5px;
+  background: $gold;
   transition: width .3s;
+}
+
+.desktop-accordion-link-black {
+  color: black;
+}
+
+.desktop-accordion-link-white {
+  color: white;
 }
 
 .desktop-accordion-link-white::after {
@@ -62,7 +70,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: white;
+  background: $gold;
   transition: width .3s;
 }
 
@@ -98,3 +106,16 @@
     }
   }
 }
+
+.hover-border-bottom-100-gold {
+  &:hover {
+    color: $gold;
+    opacity: 1;
+    cursor: pointer;
+    width: 100%;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+

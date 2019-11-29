@@ -21,6 +21,13 @@
   }
 }
 
+.hover-gold {
+  &:hover {
+    color: $gold;
+    opacity: 1;
+  }
+}
+
 
 
 

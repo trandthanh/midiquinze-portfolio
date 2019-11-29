@@ -12,6 +12,7 @@ import { color } from "../components/color";
 import { mobileOverlay } from "../components/mobileOverlay";
 import { buttonOverlay } from "../components/buttonOverlay";
 import { thumbnailGrid } from "../components/thumbnailGrid";
+import { accordionTitle } from "../components/activateAccordion";
 
 if (document.querySelector(".cover0")) {
   mouseDownWhite();
@@ -44,5 +45,7 @@ if (document.querySelector(".midiquinze-card")) {
 }
 
 
-
+if (document.getElementById("about-accordion")) {
+  accordionTitle();
+}
 

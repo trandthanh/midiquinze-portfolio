@@ -12,12 +12,12 @@ Client.destroy_all
 Project.destroy_all
 
 puts "Creating team members..."
-cléo = Member.create(name: "Cléo Barand", role: "ART DIRECTOR")
-romain = Member.create(name: "ROMAIN BELLEVILLE", role: "CREATIVE DIRECTOR + CO-FOUNDER")
-jérémie = Member.create(name: "JÉRÉMIE BŒGLIN", role: "CREATIVE DIRECTOR + CO-FOUNDER")
-morgane = Member.create(name: "MORGANE LEJEAU", role: "ACCOUNT DIRECTOR")
-laura = Member.create(name: "LAURA JOVELIN", role: "ART DIRECTOR JR")
-léa = Member.create(name: "LÉA RETAILLEAU", role: "ASSISTANT ART DIRECTOR")
+cléo = Member.create(name: "Cléo Barand", role: "Art director")
+romain = Member.create(name: "ROMAIN BELLEVILLE", role: "Co-founder + Creative director")
+jérémie = Member.create(name: "JÉRÉMIE BŒGLIN", role: "Co-founder + Creative director")
+morgane = Member.create(name: "MORGANE LEJEAU", role: "Account director")
+laura = Member.create(name: "LAURA JOVELIN", role: "Art director junior")
+léa = Member.create(name: "LÉA RETAILLEAU", role: "Assistant art director")
 puts "Done creating team members!"
 
 puts "Creating clients ..."
