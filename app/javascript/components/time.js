@@ -17,6 +17,9 @@ const time = () => {
     } else if (now.getMinutes() < 10 && now.getSeconds() > 10 && now.getHours() < 10) {
       let time = '0' + now.getHours() + ':' + '0' + now.getMinutes() + ':' + now.getSeconds();
       document.getElementById('time').innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() > 10 && now.getSeconds() > 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+      document.getElementById('time').innerHTML = [time].join(' / ');
     } else {
       let time = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
       document.getElementById('time').innerHTML = [time].join(' / ');
