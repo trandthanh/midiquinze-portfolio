@@ -4,7 +4,7 @@
     <h1 class="font-family-DINpro font-size-14vh line-height-0dot9">
       BONJOUR!
       <br>
-      WE ARE <%= Time.now.hour %>:<%= Time.now.min %>, A FRENCH
+      IT'S <span id="time"></span>, A FRENCH
       <br>
       GRAPHIC DESIGN STUDIO.
     </h1>
@@ -87,18 +87,11 @@
 
   <% elsif (Time.now.hour <= 9 || Time.now.hour >= 19) %> <!-- closed -->
     <h1 class="font-family-DINpro font-size-14vh line-height-0dot9">
-      <% if Time.now.min < 10 %>
-        IL EST <%= Time.now.hour %>:0<%= Time.now.min %>.
-      <% elsif Time.now.min < 10 && Time.now.hour %>
-        IL EST 0<%= Time.now.hour %>:0<%= Time.now.min %>.
-      <% elsif Time.now.hour < 10 %>
-        IL EST 0<%= Time.now.hour %>:<%= Time.now.min %>.
-      <% else %>
-        IL EST <%= Time.now.hour %>:<%= Time.now.min %>.
-      <% end %>
+      IL EST <span id="time"></span>
       <br>
-      ET NOUS SOMMES <%= "fermés".upcase %>.
+      ET NOUS SOMMES
       <br>
+      <%= "fermés".upcase %>.
     </h1>
     <h6 class="color-gold letter-spacing-1px">OU VRAIMENT BLEUS.</h6>
 
@@ -115,14 +108,11 @@
 
   <% else %> <!-- open -->
     <h1 class="font-family-DINpro font-size-14vh line-height-0dot9">
-      <% if (Time.now.min < 10) %>
-        IL EST <%= Time.now.hour %>:0<%= Time.now.min %>
-      <% else %>
-        IL EST <%= Time.now.hour %>:<%= Time.now.min %>
-      <% end %>
+      IL EST <span id="time"></span>
       <br>
-      ET NOUS SOMMES OUVERTS.
+      ET NOUS SOMMES
       <br>
+      OUVERTS.
     </h1>
     <h6 class="color-gold letter-spacing-1p">OU BLEUS.</h6>
   <% end %>
