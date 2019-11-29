@@ -5,20 +5,13 @@ const accordionTitle = () => {
       titles.forEach((t) => {
         if (title === t) {
           title.classList.toggle("activate-title");
+          // title.firstChild.nextElementSibling.toggle("hover-border-bottom-100-gold");
+          title.childNodes[1].classList.toggle("hover-border-bottom-100-gold");
         } else {
           t.classList.remove("activate-title");
         }
       })
     })
-
-    // title.addEventListener('mouseover', (event) => {
-    //   if (title.classList.contains("activate-title")) {
-    //     console.log(title.firstChild);
-    //     title.firstChild.classList.remove("hover-border-bottom-100-gold")
-    //   } else {
-    //     title.firstChild.classList.add("hover-border-bottom-100-gold")
-    //   }
-    // })
   })
 }
 
