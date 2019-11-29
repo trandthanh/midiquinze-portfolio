@@ -50,5 +50,7 @@ if (document.getElementById("about-accordion")) {
   accordionTitle();
 }
 
-time();
+if (document.getElementById("time")) {
+  time();
+}
 
