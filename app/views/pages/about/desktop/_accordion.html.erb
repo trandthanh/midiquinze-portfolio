@@ -33,7 +33,7 @@
 
   <%= link_to about_path(anchor: "headingThree", from: "contact"), class: "color-#{opposite_color} text-decoration-none" do %>
     <div id="headingThree" class="accordion-title <%= params[:from] ? "activate-title" : "" %> ">
-      <h1 class="desktop-accordion-link-<%= opposite_color %> font-family-DINpro font-size-26px hover-border-bottom-100-gold width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+      <h1 class="desktop-accordion-link-<%= opposite_color %> font-family-DINpro font-size-26px <%= params[:from] ? "" : "hover-border-bottom-100-gold" %> width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         CONTACT
       </h1>
 
