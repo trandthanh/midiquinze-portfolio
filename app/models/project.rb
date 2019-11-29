@@ -8,8 +8,8 @@ class Project < ApplicationRecord
   has_many :collaborators, through: :collaborations
 
   has_one_attached :cover
-  has_one_attached :logo_black
-  has_one_attached :logo_white
+  # has_one_attached :logo_black
+  # has_one_attached :logo_white
   has_one_attached :thumbnail
   has_one_attached :mobile_cover
   has_many_attached :photos

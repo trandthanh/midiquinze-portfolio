@@ -1,20 +1,17 @@
-<div style="height: calc(100vh - 8vh);">
+<div id="card-row" style="min-height: calc(100vh - 8vh);">
   <div class="row">
     <% projects.each_with_index do |project, index| %>
-      <div class="midiquinze-card col-md-3 pl-0-except-first-child pr-0-except-last-child mb-1em">
+      <div class="midiquinze-card col-md-4 pl-0-except-first-child pr-0-except-last-child mb-1em" style="">
         <%= link_to root_path(anchor: "#{project.slug}") do  %>
-            <div class="height-12em background-color-<%= opposite_color %> d-flex align-items-center justify-content-center overflow-hidden">
-              <% if @color == "white" %>
-                <%= cl_image_tag project.logo_white.key, class: "height-12em" %>
-              <% else %>
-                <%= cl_image_tag project.logo_black.key, class: "height-12em" %>
-              <% end %>
+          <div class="thumbnail-wrapper">
+            <div class="height-15em thumbnail" style="background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;">
             </div>
-
-            <div class="overlay-white <%= (index % 4 == 0) ? "width-thumbnail-first-child" : "width-thumbnail-except-first-child" %>" style="height: 12em; background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;"></div>
+          </div>
         <% end %>
       </div>
     <% end %>
   </div>
 </div>
+
+
 

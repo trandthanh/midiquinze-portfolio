@@ -142,7 +142,7 @@
 // FIRST CHILD
 
 .pl-0-except-first-child {
-  &:not(:nth-child(4n+1)) {
+  &:not(:nth-child(3n+1)) {
     padding-left: 0px;
   }
 }

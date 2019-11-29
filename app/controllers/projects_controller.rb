@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :set_color_variables, only: [:index, :change_color]
 
   def index
-    @projects = Project.select { |project| project.logo_white.attached? }
+    @projects = Project.select { |project| project.thumbnail.attached? }
   end
 # params.require(:product).permit(:title, :description, images: [])
 

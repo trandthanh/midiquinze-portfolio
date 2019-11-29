@@ -11,6 +11,7 @@ import { projectName } from "../components/projectName";
 import { color } from "../components/color";
 import { mobileOverlay } from "../components/mobileOverlay";
 import { buttonOverlay } from "../components/buttonOverlay";
+import { thumbnailGrid } from "../components/thumbnailGrid";
 
 if (document.querySelector(".cover0")) {
   mouseDownWhite();
@@ -37,6 +38,10 @@ if (document.querySelector(".midiquinze-navbar-mobile")) {
 buttonOverlay();
 
 // color();
+
+if (document.querySelector(".midiquinze-card")) {
+  thumbnailGrid();
+}
 
 
 
