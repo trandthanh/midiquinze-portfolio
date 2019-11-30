@@ -7,7 +7,7 @@ const loader = () => {
     document.querySelector(".midiquinze-footer").classList.add("position-fixed");
   }
 
-  setTimeout(appear, 5000);
+  setTimeout(appear, 4000);
 }
 
 

@@ -92,5 +92,8 @@ end
 puts "Done creating projects (vignettes)!"
 
 
+puts "Creating user..."
+User.create(email: "cbarand@midiquinze.com", password: "MidiQuinze2019!!")
+puts "Done creating user..."
 
 
