@@ -2,13 +2,8 @@
 
   <div class="mobile-vertical-snap mobile-projects-map d-flex">
     <section class="mobile-horizontal-snap height-100vh">
-      <% if project.mobile_cover.attached? %>
-        <div class="width-100vw" style="height: 100vh; background-image: url('<%= cl_image_path project.mobile_cover.key %>'); background-position: center; background-size: cover;">
+      <div class="width-100vw" style="height: 100vh; background-image: url('<%= cl_image_path project.mobile_cover.key %>'); background-position: center; background-size: cover;">
         </div>
-      <% else %>
-        <div class="width-100vw" style="height: 100vh; background-image: url('<%= image_path "mq-studio-placeholder.png" %>'); background-position: center; background-size: cover;">
-        </div>
-      <% end %>
     </section>
 
     <%= render partial: 'pages/home/mobile/mobile_project_photos', locals: {project: project, project_index: project_index} %>

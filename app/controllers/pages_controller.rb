@@ -9,6 +9,7 @@ class PagesController < ApplicationController
     end
 
     @projects = Project.select { |project| project.cover.attached? }
+    @mobile_projects = Project.select { |project| project.mobile_cover.attached? }
   end
 
 
