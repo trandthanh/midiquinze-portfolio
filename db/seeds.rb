@@ -68,12 +68,18 @@ puts "Done creating clients!"
 puts "Creating projects (vignettes)..."
 
 projects = [
-"Just Do It",
 "On the beach",
-"wwc",
+"WWC",
 "Les belles rives",
 "27 rosiers",
-"Cabourg mon amour"
+"Cabourg mon amour",
+"Kaki",
+"EPC",
+"La Parisienne",
+"Monaco",
+"Welcome Book",
+"ensemble",
+"Logos (Collection) 2017-2019"
 ]
 
 projects.each do |project|

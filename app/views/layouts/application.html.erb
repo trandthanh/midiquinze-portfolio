@@ -20,7 +20,7 @@
       <% session[:visited_before] = true %>
     <% end %>
 
-    <div id="midiquinze-main" class="<%= (current_page?(root_path) && session[:visited_before].nil?) ? 'display-none' : '' %>">
+    <div id="midiquinze-main" class="<%= (current_page?(root_path)) ? 'display-none' : '' %>">
       <%= render 'shared/navbar' %>
         <%= yield %>
       <%= render 'shared/footer' %>

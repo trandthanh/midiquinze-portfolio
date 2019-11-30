@@ -1,5 +1,5 @@
 const loader = () => {
-  const test = () => {
+  const appear = () => {
     document.getElementById("midiquinze-gif-loader").classList.add("display-none");
     document.getElementById("midiquinze-main").classList.remove("display-none");
     document.getElementById("midiquinze-main").classList.add("display-block");
@@ -7,7 +7,7 @@ const loader = () => {
     document.querySelector(".midiquinze-footer").classList.add("position-fixed");
   }
 
-  setTimeout(test, 5000);
+  setTimeout(appear, 5000);
 }
 
 
