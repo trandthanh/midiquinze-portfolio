@@ -1,4 +1,4 @@
-<div id="about-accordion" class="accordion mb-100px mt-50px" >
+<div id="about-accordion" class="accordion mb-100px mt-2em" >
 
   <div id="headingOne" class="accordion-title">
     <h1 class="font-family-DINpro font-size-26px desktop-accordion-link-<%= opposite_color %> hover-border-bottom-100-gold width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -8,7 +8,7 @@
   <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#about-accordion"> <!-- add class show if needed -->
     <div class="mt-2em mb-24px">
       <% @members.each do |member| %>
-        <p class="letter-spacing-1px line-height-1dot2em m-0" style="width: 90%;"><span><%= member.name.upcase %></span>  /  <span class="font-size-11px"><%= member.role.capitalize %></span></p>
+        <p class="letter-spacing-1px m-0" style="width: 90%; line-height: 12px; padding-top: 8px;"><span><%= member.name.upcase %></span>  /  <span class="font-size-11px"><%= member.role.capitalize %></span></p>
       <% end %>
     </div>
   </div>

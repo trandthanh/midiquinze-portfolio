@@ -90,29 +90,19 @@
   <% elsif (Time.now.hour <= 9 || Time.now.hour >= 19) %> <!-- closed -->
     <div class="padding-top-8em">
       <h1 class="font-family-DINpro font-size-7vh line-height-0dot9">
-        <% if Time.now.min < 10 %>
-          IL EST <%= Time.now.hour %>:0<%= Time.now.min %>.
-        <% elsif Time.now.min < 10 && Time.now.hour %>
-          IL EST 0<%= Time.now.hour %>:0<%= Time.now.min %>.
-        <% elsif Time.now.hour < 10 %>
-          IL EST 0<%= Time.now.hour %>:<%= Time.now.min %>.
-        <% else %>
-          IL EST <%= Time.now.hour %>:<%= Time.now.min %>.
-        <% end %>
+        IL EST <span id="mobile-time"></span>
         <br>
         ET NOUS SOMMES <%= "fermés".upcase %>.
-        <br>
-        OU VRAIMENT BLEUS.
       </h1>
-      <h4 class="letter-spacing-1px">(FRENCH JOKE<%#= image_tag "#{opposite_color}-smiley.png", class: "height-20px mb-5px" %>)</h4>
+      <h6 class="color-gold letter-spacing-1px">OU VRAIMENT BLEUS.</h6>
     </div>
 
   <% elsif (Time.now.hour == 13) %> <!-- lunch -->
     <h1 class="font-family-DINpro font-size-7vh line-height-0dot9">
       <% if Time.now.min < 10 %>
-        <%= Time.now.hour %>:0<%= Time.now.min %> IT'S TIME TO LUNCH
+        <span id="time"></span>, IT'S TIME TO LUNCH
       <% else %>
-        <%= Time.now.hour %>:<%= Time.now.min %> IT'S TIME TO LUNCH
+        <span id="time"></span>, IT'S TIME TO LUNCH
       <% end %>
       <br>
       BON <%= "appétit".upcase %>!
@@ -120,17 +110,11 @@
 
   <% else %> <!-- open -->
     <h1 class="font-family-DINpro font-size-7vh line-height-0dot9">
-      <% if (Time.now.min < 10) %>
-        IL EST <%= Time.now.hour %>:0<%= Time.now.min %>
-      <% else %>
-        IL EST <%= Time.now.hour %>:<%= Time.now.min %>
-      <% end %>
+      IL EST <span id="time"></span>
       <br>
       ET NOUS SOMMES OUVERTS.
-      <br>
-      OU BLEUS.
     </h1>
-    <h4 class="letter-spacing-1px">(FRENCH JOKE<%#= image_tag "#{opposite_color}-smiley.png", class: "height-20px mb-5px" %>)</h4>
+    <h6 class="color-gold letter-spacing-1p">OU BLEUS.</h6>
   <% end %>
 
   <div class="d-flex justify-content-center pb-2em">

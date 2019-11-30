@@ -13,17 +13,17 @@
   <!-- Overlay content -->
   <div class="mobile-navbar-overlay-content pb-7em">
     <%= link_to projects_path do %>
-      <h1 class="color-<%= opposite_color %> m-0">WORK</h1>
+      <h1 class="color-<%= opposite_color %> font-size-7vh m-0">WORK</h1>
     <% end %>
-    <%= link_to about_path do %>
-      <h1 class="color-<%= opposite_color %> m-0">STUDIO</h1>
+    <%= link_to about_path, class: "mt-neg10px" do %>
+      <h1 class="color-<%= opposite_color %> font-size-7vh m-0">STUDIO</h1>
     <% end %>
-    <%= link_to about_path(anchor: "headingThree", from: "contact") do %>
-      <h1 class="color-<%= opposite_color %> m-0">CONTACT</h1>
+    <%= link_to about_path(anchor: "headingThree", from: "contact"), class: "mt-neg10px" do %>
+      <h1 class="color-<%= opposite_color %> font-size-7vh m-0">CONTACT</h1>
     <% end %>
   </div>
 
-  <div class="mobile-navbar-overlay-footer d-flex align-items-center color-<%= opposite_color %>  px-8pc pb-1em">
+  <div class="mobile-navbar-overlay-footer d-flex align-items-center color-<%= opposite_color %>  px-8pc pb-2em">
     <div class="mobile-navbar-overlay-footer-social d-flex width-100pc">
       <i class="fab fa-instagram font-size-24px mr-8pc"></i>
       <i class="fab fa-behance font-size-24px mr-8pc"></i>
