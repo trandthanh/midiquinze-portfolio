@@ -20,7 +20,7 @@
         <div class="mt-50px">
           <div>
             <% unless project.client.nil? %>
-              <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.client.name.upcase %>
+              <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.title.upcase %>
             <% end %>
           </div>
           <% unless project.collaborations.empty? %>
