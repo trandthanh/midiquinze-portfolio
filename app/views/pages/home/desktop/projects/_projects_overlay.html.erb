@@ -7,7 +7,7 @@
 
     <div class="color-<%= color %> font-weight-300 letter-spacing-1px pl-2em pr-4em pt-26px">
       <p class="m-0 letter-spacing-0dot8px">
-        <span class="font-weight-700"><%= project.client.name.upcase %></span> <span><%= project.time %></span>
+        <span class="font-weight-700"><%= project.title.upcase %></span> <span><%= project.time %></span>
         <div>
           <% project.works.each do |project_work| %>
             <%= project_work.job.name.upcase %>
