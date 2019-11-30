@@ -19,7 +19,9 @@
         </div>
         <div class="mt-50px">
           <div>
-            <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.client.name.upcase %>
+            <% unless project.client.nil? %>
+              <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.client.name.upcase %>
+            <% end %>
           </div>
           <% unless project.collaborations.empty? %>
             <% project.collaborators.each do |collaborator| %>
