@@ -50,7 +50,7 @@ if (document.getElementById("about-accordion")) {
   accordionTitle();
 }
 
-if (document.getElementById("time")) {
+if (document.getElementById("midiquinze-main")) {
   time();
 }
 
