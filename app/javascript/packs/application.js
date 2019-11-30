@@ -20,7 +20,7 @@ if (document.querySelector(".cover0")) {
   clickScroll();
 }
 
-if (document.querySelector(".loader")) {
+if (document.querySelector("#midiquinze-main")) {
   loader();
 };
 
@@ -50,7 +50,7 @@ if (document.getElementById("about-accordion")) {
   accordionTitle();
 }
 
-if (document.getElementById("midiquinze-main")) {
+if (document.getElementById("mq-home")) {
   time();
 }
 

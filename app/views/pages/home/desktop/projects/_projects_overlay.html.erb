@@ -19,9 +19,7 @@
         </div>
         <div class="mt-50px">
           <div>
-            <% unless project.client.nil? %>
-              <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.title.upcase %>
-            <% end %>
+            <span class="border-bottom-1px-solid-<%= color %> pb-2px">Client:</span> <%= project.client.nil? ? project.title.upcase : project.client.name.upcase %>
           </div>
           <% unless project.collaborations.empty? %>
             <% project.collaborators.each do |collaborator| %>

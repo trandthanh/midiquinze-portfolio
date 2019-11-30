@@ -7,7 +7,12 @@ const loader = () => {
     document.querySelector(".midiquinze-footer").classList.add("position-fixed");
   }
 
-  setTimeout(appear, 4000);
+  if (document.querySelector("#midiquinze-gif-loader")) {
+    setTimeout(appear, 4000);
+  } else {
+    document.getElementById("midiquinze-main").classList.remove("display-none");
+  }
+
 }
 
 

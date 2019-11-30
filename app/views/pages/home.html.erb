@@ -3,7 +3,7 @@
     <%= render partial: 'pages/home/messages', locals: { opposite_color: @opposite_color } %>
   </div>
 
-  <%= render partial: 'pages/home/desktop/projects', locals: { projects: @projects } %>
+  <%= render partial: 'pages/home/desktop/projects', locals: { projects: @projects, opposite_color: @opposite_color, color: @color } %>
 </main>
 
 <main id="mq-home-mobile">

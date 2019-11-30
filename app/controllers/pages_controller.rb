@@ -3,7 +3,11 @@ class PagesController < ApplicationController
   before_action :set_color_variables, only: [:home, :about, :contact, :change_color, :test]
 
   def home
-    session.delete(:visited_before)
+
+    unless params[:from] == "thumbs"
+      session.delete(:visited_before)
+    end
+
     @projects = Project.select { |project| project.cover.attached? }
   end
 
