@@ -2,10 +2,8 @@
   <% projects.each_with_index do |project, index| %>
 
     <%= link_to projects_path(anchor: "#{project.slug}") do %>
-      <% unless project.mobile_cover.nil? %>
-        <div class="mq-home-mobile-project-cover height-32vh <%= projects.count == (index + 1) ? "" : "mb-16px" %>" style="background-image: url('<%= cl_image_path project.mobile_cover.key %>'); background-position: center; background-size: cover;">
-        </div>
-      <% end %>
+      <div class="mq-home-mobile-project-cover height-32vh <%= projects.count == (index + 1) ? "" : "mb-16px" %>" style="background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;">
+      </div>
     <% end %>
 
   <% end %>
