@@ -50,7 +50,7 @@ if (document.getElementById("about-accordion")) {
   accordionTitle();
 }
 
-if (document.getElementById("mq-home")) {
+if (document.getElementById("mq-home") || document.querySelector(".hour")) {
   time();
 }
 
