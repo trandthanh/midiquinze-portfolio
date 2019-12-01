@@ -35,7 +35,7 @@
   display: block;
   width: 0;
   height: 1px;
-  background: white;
+  background: $gold;
   transition: width .3s;
 }
 
@@ -44,7 +44,7 @@
   display: block;
   width: 0;
   height: 1px;
-  background: black;
+  background: $gold;
   transition: width .3s;
 }
 
