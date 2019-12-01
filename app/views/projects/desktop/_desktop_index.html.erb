@@ -4,7 +4,7 @@
       <div class="midiquinze-card col-md-4 pl-0-except-first-child pr-0-except-last-child mb-1em" style="">
         <%= link_to root_path(anchor: "#{project.slug}", from: "thumbs") do  %>
           <div class="thumbnail-wrapper">
-            <div class="background-color-<%= opposite_color %> height-15dot5em thumbnail" style="background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;">
+            <div class="background-color-<%= opposite_color %> height-17em thumbnail" style="background-image: url('<%= cl_image_path project.thumbnail.key %>'); background-position: center; background-size: cover;">
             </div>
           </div>
         <% end %>

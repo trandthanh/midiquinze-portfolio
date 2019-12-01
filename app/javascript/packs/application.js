@@ -13,7 +13,7 @@ import { mobileOverlay } from "../components/mobileOverlay";
 import { buttonOverlay } from "../components/buttonOverlay";
 import { thumbnailGrid } from "../components/thumbnailGrid";
 import { accordionTitle } from "../components/activateAccordion";
-import { time } from "../components/time";
+import { messageTime, mobileMessageTime, horizontalTime } from "../components/time";
 
 if (document.querySelector(".cover0")) {
   mouseDownWhite();
@@ -50,7 +50,16 @@ if (document.getElementById("about-accordion")) {
   accordionTitle();
 }
 
-if (document.getElementById("mq-home") || document.querySelector(".hour")) {
-  time();
+if (document.getElementById("time")) {
+  messageTime();
 }
+
+if (document.getElementById("mobile-time")) {
+  mobileMessageTime();
+}
+
+if (document.querySelectorAll(".horizontal-time")) {
+  horizontalTime();
+}
+
 

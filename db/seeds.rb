@@ -12,12 +12,12 @@ Client.destroy_all
 Project.destroy_all
 
 puts "Creating team members..."
-cléo = Member.create(name: "Cléo Barand", role: "Art director")
-romain = Member.create(name: "ROMAIN BELLEVILLE", role: "Co-founder + Creative director")
-jérémie = Member.create(name: "JÉRÉMIE BŒGLIN", role: "Co-founder + Creative director")
-morgane = Member.create(name: "MORGANE LEJEAU", role: "Account director")
-laura = Member.create(name: "LAURA JOVELIN", role: "Art director junior")
-léa = Member.create(name: "LÉA RETAILLEAU", role: "Assistant art director")
+cléo = Member.create(name: "Cléo Barand", role: "Art director", link: "https://www.linkedin.com/in/cleobarand/")
+romain = Member.create(name: "ROMAIN BELLEVILLE", role: "Co-founder + Creative director", link: "https://www.linkedin.com/in/romain-belleville/")
+jérémie = Member.create(name: "JÉRÉMIE BŒGLIN", role: "Co-founder + Creative director", link: "https://www.linkedin.com/in/jérémie-boeglin-9b2741142/")
+morgane = Member.create(name: "MORGANE LEJEAU", role: "Account director", link: "https://www.linkedin.com/in/morgane-lejeau/")
+laura = Member.create(name: "LAURA JOVELIN", role: "Art director junior", link: "https://www.linkedin.com/in/laura-jovelin-9b7b14155/")
+léa = Member.create(name: "LÉA RETAILLEAU", role: "Assistant art director", link: "https://www.linkedin.com/in/lea-retailleau-a03453182/")
 puts "Done creating team members!"
 
 puts "Creating clients ..."

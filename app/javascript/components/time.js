@@ -1,59 +1,130 @@
-const time = () => {
+let now = new Date();
 
-  const updateClock = () => {
-    let now = new Date();
+const messageTime = () => {
+  const updateMessageTime = () => {
+    const messageSpan = document.getElementById("time");
     if (now.getSeconds() < 10 && now.getMinutes() >= 10 && now.getHours() >= 10) {
       let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
       let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() < 10) {
       let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
       let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
       let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() >= 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
       let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() < 10) {
       let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() >= 10) {
       let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     } else {
       let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
-      document.getElementById('time').innerHTML = [time].join(' / ');
-      document.getElementById('mobile-time').innerHTML = [time].join(' / ');
-      document.getElementById('horizontal-time').innerHTML = [time].join(' / ');
+      messageSpan.innerHTML = [time].join(' / ');
     }
   }
 
-  // set the content of the element with the ID time to the formatted string
-
-  // call this function again in 1000ms
-  setInterval(updateClock, 1000);
+  setInterval(updateMessageTime, 1000);
 }
 
-export { time }
+const mobileMessageTime = () => {
+  const updateMobileMessageTime = () => {
+    const mobileSpan = document.getElementById("mobile-time");
+    if (now.getSeconds() < 10 && now.getMinutes() >= 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() >= 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    } else {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      mobileSpan.innerHTML = [time].join(' / ');
+    }
+  }
+
+  setInterval(updateMobileMessageTime, 1000);
+}
+
+const horizontalTime = () => {
+  const updateHorizontalTime = () => {
+    const times = document.querySelectorAll(".horizontal-time");
+    if (now.getSeconds() < 10 && now.getMinutes() >= 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() >= 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+      let time = '0' + now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + '0' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() >= 10) {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + '0' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    } else {
+      let time = now.getHours() + '<span class="color-gold">:</span>' + now.getMinutes() + '<span class="color-gold">:</span>' + now.getSeconds();
+      times.forEach((t) => {
+        t.innerHTML = [time].join(' / ');
+      })
+    }
+  }
+
+  setInterval(updateHorizontalTime, 1000);
+
+}
+
+export { messageTime, mobileMessageTime, horizontalTime }

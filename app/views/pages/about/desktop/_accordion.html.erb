@@ -1,6 +1,6 @@
 <div id="about-accordion" class="accordion mb-100px mt-2em" >
 
-  <div id="headingOne" class="accordion-title">
+  <div id="headingOne" class="accordion-title mb-5px">
     <h1 class="font-family-DINpro font-size-26px desktop-accordion-link-<%= opposite_color %> hover-border-bottom-100-gold width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
       TEAM
     </h1>
@@ -8,12 +8,16 @@
   <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#about-accordion"> <!-- add class show if needed -->
     <div class="mt-2em mb-24px">
       <% @members.each do |member| %>
-        <p class="letter-spacing-1px m-0" style="width: 90%; line-height: 12px; padding-top: 8px;"><span><%= member.name.upcase %></span>  /  <span class="font-size-11px"><%= member.role.capitalize %></span></p>
+        <p class="letter-spacing-1px m-0" style="width: 90%; line-height: 12px; padding-top: 8px;">
+          <%= link_to member.link, target: "blank", class: "color-#{opposite_color} hover-color-gold-text-decoration-none" do %>
+            <span><%= member.name.upcase %></span>
+          <% end %>
+          /  <span class="font-size-11px"><%= member.role.capitalize %></span></p>
       <% end %>
     </div>
   </div>
 
-  <div id="headingTwo" class="accordion-title">
+  <div id="headingTwo" class="accordion-title mb-5px">
     <h1 class="desktop-accordion-link-<%= opposite_color %> font-family-DINpro font-size-26px hover-border-bottom-100-gold width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
       CLIENTS
     </h1>
@@ -32,7 +36,7 @@
   </div>
 
   <%= link_to about_path(anchor: "headingThree", from: "contact"), class: "color-#{opposite_color} text-decoration-none" do %>
-    <div id="headingThree" class="accordion-title <%= params[:from] ? "activate-title" : "" %> ">
+    <div id="headingThree" class="accordion-title mb-5px <%= params[:from] ? "activate-title" : "" %> ">
       <h1 class="desktop-accordion-link-<%= opposite_color %> font-family-DINpro font-size-26px <%= params[:from] ? "" : "hover-border-bottom-100-gold" %> width-max-content letter-spacing-2px m-0" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         CONTACT
       </h1>
