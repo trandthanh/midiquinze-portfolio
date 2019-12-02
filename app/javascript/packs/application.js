@@ -51,15 +51,15 @@ if (document.getElementById("about-accordion")) {
 }
 
 if (document.getElementById("time")) {
-  messageTime();
+  setInterval(messageTime, 1000);
 }
 
 if (document.getElementById("mobile-time")) {
-  mobileMessageTime();
+  setInterval(mobileMessageTime, 1000);
 }
 
 if (document.querySelectorAll(".horizontal-time")) {
-  horizontalTime();
+  setInterval(horizontalTime, 1000);
 }
 
 

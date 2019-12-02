@@ -85,7 +85,7 @@
     <h6 class="color-gold letter-spacing-1px pl-3px">(MERRY CHRISTMAS)</h6>
 
 
-  <% elsif (Time.now.hour <= 9 || Time.now.hour >= 19) %> <!-- closed -->
+  <% elsif (Time.now.hour < 9 || Time.now.hour >= 19) %> <!-- closed -->
     <h1 class="font-family-DINpro font-size-14vh line-height-0dot9">
       IL EST <span id="time"></span>
       <br>
