@@ -26,8 +26,12 @@
     <div class="mt-2em mb-24px">
       <p class="letter-spacing-1px">
         <% @clients.each do |client| %>
-          <%= link_to root_path(anchor: client.projects.empty? ? "" : "#{client.projects.first.slug}"), class: "color-#{opposite_color} hover-color-gold-text-decoration-none font-weight-300" do %>
+          <% if client.projects.empty? %>
             <%= client.name %>
+          <% else %>
+            <%= link_to root_path(anchor: client.projects.empty? ? "" : "#{client.projects.first.slug}"), class: "color-#{opposite_color} hover-color-gold-text-decoration-none font-weight-300" do %>
+              <%= client.name %>
+            <% end %>
           <% end %>
           <%= "/" unless client == @clients.last %>
         <% end %>
