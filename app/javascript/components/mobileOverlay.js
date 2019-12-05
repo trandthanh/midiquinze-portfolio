@@ -1,7 +1,7 @@
 const mobileOverlay = () => {
   /* Open when someone clicks on the span element */
   function openNav() {
-    document.getElementById("midiquinze-mobile-navbar-overlay").style.height = "100vh";
+    document.getElementById("midiquinze-mobile-navbar-overlay").style.height = "95vh";
     // document.querySelector(".midiquinze-navbar-mobile").classList.add("background-color-black");
   }
 
