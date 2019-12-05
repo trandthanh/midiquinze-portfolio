@@ -47,7 +47,6 @@ const clickVerticalHorizontal = () => {
     const slideWidth = window.innerWidth;
 
 
-
     // last row cover
     if (slide == document.querySelector(`.cover${numberOfProjects}`)) {
 
@@ -94,7 +93,7 @@ const clickVerticalHorizontal = () => {
           console.log(event.clientX > (slideWidth / 3 * 2) && (event.clientX < slideRight));
 
           if (panoIndex == numberOfSlides) { // last slide on row
-            scrollIntoViewSlide(`.cover${previousNumber}`);
+            scrollIntoViewSlide(`.cover${nextNumber}`);
           } else { // other slides
             console.log(document.querySelector(`.pano${nextPanoIndex}-${project}`));
             scrollIntoViewSlide(`.pano${nextPanoIndex}-${project}`);
