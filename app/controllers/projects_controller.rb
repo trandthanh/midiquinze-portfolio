@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_action :set_color_variables, only: [:index, :change_color]
 
   def index
-    @projects = Project.select { |project| project.thumbnail.attached? }.sort_by { |title| title.downcase }
+    @projects = Project.order("title ASC").select { |project| project.thumbnail.attached? }
   end
 # params.require(:product).permit(:title, :description, images: [])
 
