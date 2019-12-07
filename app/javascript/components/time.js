@@ -4,25 +4,22 @@ const messageTime = () => {
   if (now.getSeconds() < 10 && now.getMinutes() >= 10 && now.getHours() >= 10) {
     let time = now.getHours() + '<span>:</span>' + now.getMinutes() + '<span>:</span>' + '0' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
+  } else if (now.getSeconds() < 10 && now.getMinutes() < 10 && now.getHours() >= 10) {
     let time = now.getHours() + '<span>:</span>' + '0' + now.getMinutes() + '<span>:</span>' + '0' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() < 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+  } else if (now.getSeconds() < 10 && now.getMinutes() < 10 && now.getHours() < 10) {
     let time = '0' + now.getHours() + '<span>:</span>' + '0' + now.getMinutes() + '<span>:</span>' + '0' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() >= 10) {
-    let time = now.getHours() + '<span>:</span>' + '0' + now.getMinutes() + '<span>:</span>' + now.getSeconds();
-    messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+  } else if (now.getSeconds() >= 10 && now.getMinutes() < 10 && now.getHours() < 10) {
     let time = '0' + now.getHours() + '<span>:</span>' + '0' + now.getMinutes() + '<span>:</span>' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() >= 10 && now.getSeconds() >= 10 && now.getHours() < 10) {
+  } else if (now.getSeconds() >= 10 && now.getMinutes() >= 10 && now.getHours() < 10) {
     let time = '0' + now.getHours() + '<span>:</span>' + now.getMinutes() + '<span>:</span>' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() >= 10 && now.getSeconds() < 10 && now.getHours() < 10) {
+  } else if (now.getSeconds() < 10 && now.getMinutes() >= 10 && now.getHours() < 10) {
     let time = '0' + now.getHours() + '<span>:</span>' + now.getMinutes() + '<span>:</span>' + '0' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
-  } else if (now.getMinutes() < 10 && now.getSeconds() >= 10 && now.getHours() >= 10) {
+  } else if (now.getSeconds() >= 10 && now.getMinutes() < 10 && now.getHours() >= 10) {
     let time = now.getHours() + '<span>:</span>' + '0' + now.getMinutes() + '<span>:</span>' + now.getSeconds();
     messageSpan.innerHTML = [time].join(' / ');
   } else {
