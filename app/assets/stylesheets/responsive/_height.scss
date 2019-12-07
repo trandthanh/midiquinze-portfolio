@@ -1,30 +1,34 @@
-@include media-breakpoint-only(xs) {
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
   .height-work-thumbnail {
-    height: 17em;
+    height: 18em;
   }
 }
 
-@include media-breakpoint-only(sm) {
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {
   .height-work-thumbnail {
-    height: 17em;
+    height: 18em;
   }
 }
 
-@include media-breakpoint-only(md) {
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {
   .height-work-thumbnail {
-    height: 17em;
+    height: 18em;
   }
 }
 
-@include media-breakpoint-only(lg) {
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .height-work-thumbnail {
-    height: 17em;
+    height: 18em;
   }
 }
 
-@include media-breakpoint-only(xl) {
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1500px) {
   .height-work-thumbnail {
     height: 30em;
   }
 }
-
