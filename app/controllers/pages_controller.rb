@@ -8,7 +8,7 @@ class PagesController < ApplicationController
       session.delete(:visited_before)
     end
 
-    @projects = Project.select { |project| project.cover.attached? }
+    @projects = Project.select { |project| project.cover.attached? }.sort_by(&:title)
     @mobile_projects = Project.select { |project| project.mobile_cover.attached? }
   end
 
