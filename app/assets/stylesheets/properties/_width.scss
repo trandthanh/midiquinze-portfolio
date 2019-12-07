@@ -136,7 +136,11 @@
 
 // calc
 
-.width-100vwminus17dot3vw {
-  width: calc(100vw - 17.3vw);
+.width-100vwminus15dot3vw {
+  width: calc(100vw - 15.3vw);
+}
+
+.width-100vwminus13dot2em {
+  width: calc(100vw - 13.2em);
 }
 
