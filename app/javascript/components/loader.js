@@ -9,6 +9,7 @@ const loader = () => {
   }
 
   if (document.querySelector("#midiquinze-gif-loader")) {
+    document.querySelector(".midiquinze-footer").classList.add("display-none");
     setTimeout(appear, 4000);
   } else {
     document.getElementById("midiquinze-main").classList.remove("display-none");
